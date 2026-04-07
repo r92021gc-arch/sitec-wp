@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Endpoint protegido por nonce para crear contenido demo
 add_action('admin_init', function(){
 	if (!current_user_can('manage_options')) return;
@@ -169,48 +169,213 @@ add_action('admin_init', function(){
 		}
 	}
 
-	// Casos demo
-	// Casos con contenido extendido
+	// Casos de éxito reales
 	$case_entries = [
 		[
-			'title' => 'Guardia Nacional — Modernización de Infraestructura',
-			'aliases' => ['Guardia Nacional'],
+			'title' => 'UAGro — Sistema CCTV Campus Universitario',
+			'aliases' => ['UAGro','Universidad Autónoma de Guerrero'],
 			'content' =>
-				"<h2>Modernización de Infraestructura de Seguridad y Comunicaciones</h2>".
-				"<p><strong>Cliente:</strong> Guardia Nacional (SSPC) — <strong>Sector:</strong> Seguridad Pública — <strong>Alcance:</strong> 4 estados (Guerrero, Hidalgo, Jalisco, Zacatecas) — <strong>Año:</strong> 2022–2023 — <strong>Inversión:</strong> $47.5M MXN</p>".
-				"<h3>Desafío</h3><ul><li>Comunicaciones interrumpidas en operativos</li><li>Zonas sin cobertura de vigilancia</li><li>Capacitación deficiente</li><li>Enlaces poco confiables en zonas remotas</li></ul>".
-				"<h3>Solución</h3><ol>".
-				"<li><strong>Videovigilancia</strong>: 450+ cámaras AXIS con IA, LPR, intrusión, grabación 90 días y C4 por estado.</li>".
-				"<li><strong>Red de Datos</strong>: 28km Cat6A, backbone de fibra, VSAT en 12 sedes, failover &lt;30s.</li>".
-                "<li><strong>Aulas Inteligentes</strong>: 16 aulas con VC HD, pantallas 86&quot;, audio pro, e-learning.</li>".
-				"<li><strong>Radiocomunicación</strong>: P25 cifrado, 280 radios portátiles + 64 móviles, 8 repetidoras.</li></ol>".
-				"<h3>Resultados</h3><ul><li>30% menos tiempos de respuesta</li><li>99.7% uptime de red</li><li>100% cobertura en áreas críticas</li><li>Cero brechas perimetrales en 18 meses</li><li>500+ elementos capacitados</li><li>40% menos costos de mantenimiento</li></ul>".
-				"<p><em>Testimonial:</em> “Integración superior y cumplimiento de plazos; capacidades operativas mejoradas.” — Cmdt. Roberto Martínez</p>",
+				"<h2>Instalación Sistema CCTV en Instalaciones Universitarias</h2>".
+				"<p><strong>Cliente:</strong> Universidad Autónoma de Guerrero (UAGro) — <strong>Sector:</strong> Educación Pública — <strong>Período:</strong> Nov 2015 / May 2016</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro e instalación de cámaras de seguridad en campus universitario</li>".
+				"<li>Cableado estructurado Cat 6 para red de videovigilancia</li>".
+				"<li>Instalación de grabadoras de video en red (NVR)</li>".
+				"<li>Configuración y puesta en marcha del sistema CCTV</li>".
+				"<li>Instalación de monitores de supervisión</li>".
+				"<li>Capacitación al personal operativo</li>".
+				"</ul>",
 		],
 		[
-			'title' => 'SEDENA — Control de Acceso Biométrico Santa Lucía',
-			'aliases' => ['SEDENA Santa Lucía','SEDENA - BASE MILITAR SANTA LUCÍA'],
+			'title' => 'Extracciones y Triturados Mineros — CCTV Operaciones',
+			'aliases' => ['Extracciones y Triturados Mineros'],
 			'content' =>
-				"<h2>Sistema Integral de Control de Acceso Biométrico</h2>".
-				"<p><strong>Cliente:</strong> SEDENA — <strong>Ubicación:</strong> Base Aérea Militar Santa Lucía — <strong>Año:</strong> 2023 — <strong>Inversión:</strong> $12.8M MXN</p>".
-				"<h3>Solución</h3><ul><li>24 torniquetes biométricos</li><li>Facial + huella + RFID</li><li>8 carriles vehiculares con LPR</li><li>Gestión central con backup</li><li>Integración con RH/nómina y alertas</li><li>Perimetral: 120 cámaras térmicas y visibles con IA</li></ul>".
-				"<h3>Resultados</h3><ul><li>8,500 personas/día en ~4s</li><li>99.98% precisión biométrica</li><li>Cero accesos no autorizados (14 meses)</li><li>75% menos tiempo en reportes</li><li>Cumplimiento 100% protocolos</li></ul>".
-				"<p><em>Testimonial:</em> “Opera 24/7 sin interrupciones y con estándares internacionales.” — Gral. Luis A. García</p>",
+				"<h2>Instalación de Cámaras IP para Supervisión de Operaciones Mineras</h2>".
+				"<p><strong>Cliente:</strong> Extracciones y Triturados Mineros — <strong>Sector:</strong> Minero Privado — <strong>Período:</strong> Oct 2018 / Feb 2019</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro e instalación de cámaras IP para exteriores industriales</li>".
+				"<li>Instalación en zonas de extracción y trituración</li>".
+				"<li>Cableado estructurado y canalizaciones en ambiente industrial</li>".
+				"<li>Configuración de sistema de grabación y monitoreo remoto</li>".
+				"<li>Puesta en operación y pruebas funcionales</li>".
+				"</ul>",
 		],
 		[
-			'title' => 'INE — Infraestructura de Elecciones Digitales 2024',
-			'aliases' => ['INE'],
+			'title' => 'Miguel Ángel Adame Quaas — Sistema IP Privado',
+			'aliases' => ['Miguel Ángel Adame Quaas'],
 			'content' =>
-				"<h2>Red Segura para Proceso Electoral 2024</h2>".
-				"<p><strong>Alcance:</strong> 15 estados — <strong>Año:</strong> 2023–2024 — <strong>Inversión:</strong> $28.3M MXN — <strong>Despliegue:</strong> 300 ubicaciones</p>".
-				"<h3>Solución</h3><ul><li>Red modular con enlaces 4G/5G de respaldo y VPN segura</li><li>Monitoreo 24/7</li><li>Videovigilancia temporal y control de acceso</li><li>Data centers modulares (15)</li></ul>".
-				"<h3>Resultados</h3><ul><li>100% disponibilidad en días críticos</li><li>Cero incidentes de seguridad</li><li>300 sitios en 45 días</li><li>98.5% transmisión exitosa</li></ul>",
+				"<h2>Instalación de Cámaras IP en Instalaciones Privadas</h2>".
+				"<p><strong>Cliente:</strong> Miguel Ángel Adame Quaas — <strong>Sector:</strong> Privado — <strong>Período:</strong> Nov 2020 / May 2021</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro e instalación de cámaras IP de seguridad</li>".
+				"<li>Diseño y tendido de red de datos para videovigilancia</li>".
+				"<li>Instalación de central de grabación y monitoreo</li>".
+				"<li>Configuración de acceso remoto vía dispositivos móviles</li>".
+				"<li>Capacitación al cliente final</li>".
+				"</ul>",
 		],
-		// Mini-cards (resumen)
-		['title'=>'Centro Comercial Plaza Milenium','aliases'=>[],'content'=>'<p>180 cámaras AXIS + LED + WiFi. <strong>45% menos incidentes</strong>, ROI 2.1 años.</p>'],
-		['title'=>'Hospital General de Acapulco','aliases'=>[],'content'=>'<p>Electrificación + solar 150kWp + UPS. <strong>68% ahorro energético</strong>.</p>'],
-		['title'=>'Universidad Tecnológica del Valle','aliases'=>[],'content'=>'<p>WiFi campus + acceso + CCTV. <strong>3,500 usuarios concurrentes</strong>, 99.5% uptime.</p>'],
-		['title'=>'Hotel Fiesta Americana','aliases'=>[],'content'=>'<p>WiFi y seguridad (300 hab.). <strong>45% menos incidentes</strong>, 70% ahorro energético.</p>'],
+		[
+			'title' => 'SEDENA — Zacatecas Frente 1, Sistema de Comunicaciones',
+			'aliases' => ['SEDENA Zacatecas Frente 1','SEDENA – Zacatecas Frente 1'],
+			'content' =>
+				"<h2>Construcción de Instalaciones para Apoyo en Tareas de Seguridad Pública — Zacatecas Frente 1</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> 07 Jun 2021 / 10 Jul 2021</p>".
+				"<p>Adquisición, suministro, instalación, configuración y puesta en operación del sistema de comunicaciones. 2 predios: \"La Escondida\" (Av. Universidad de Zacatecas S/N) y \"Los Indios\" (Km 54.5, Río Grande).</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Nodos dobles de datos (internet sala OPS) con cableado Cat 6A FTP blindado</li>".
+				"<li>Gabinetes de comunicaciones empotrados de 12 unidades de rack</li>".
+				"<li>Nodos sencillos de videovigilancia con cableado Cat 6A LSZH conectado a cámaras</li>".
+				"<li>Nodos sencillos de voz con cableado UTP Cat 6A 100 ohms LSZH</li>".
+				"<li>Equipo de cómputo (desktop Intel Core i7, 16GB RAM, 1TB, pantalla 15\")</li>".
+				"<li>Escáner cama plana resolución 4800×9600 DPI</li>".
+				"<li>Impresora monocromática láser 52 rpm, 1200×1200 DPI</li>".
+				"<li>UPS 1400 VAC, 60Hz con 6 tomacorrientes Nema 5-15r</li>".
+				"<li>Estación terrena remota satelital iDirect/IQ5+ hasta 100 Mbps — antena 1.8m</li>".
+				"<li>Switch 28 puertos Gigabit + 2 SFP, administrable, capa 3, PoE (24 puertos)</li>".
+				"<li>Teléfonos IP 6 líneas, 2 puertos RJ-45, PoE — instalación en servidor Asterisk</li>".
+				"<li>Antena aérea para TV HD con booster, tubos, soportes, tornillería, cable coaxial, sellado</li>".
+				"<li>Pantallas LED 55\" Smart 4K UHD con puertos LAN, HDMI y USB</li>".
+				"<li>Torre de telecomunicaciones 15m, sección triangular 29-30cm, kit obstrucción aviación</li>".
+				"<li>Cámaras de videovigilancia Axis M2025-le exterior, 1080p 2.1MP, PoE, IP66/IP4x</li>".
+				"<li>Laptop con software Axis Camera Station para punto de monitoreo CCTV</li>".
+				"<li>Grabador de video en red (NVR) Axis S2212, 6TB, 12ch/ptos PoE, 2 puertos LAN</li>".
+				"<li>Pantalla Smart TV 4K LED 43\" con control remoto y cables</li>".
+				"<li>Instalación, configuración e integración de todo el equipamiento</li>".
+				"<li>Puesta en operación y pruebas funcionales en sitio</li>".
+				"<li>Garantía de calidad por 12 meses, reemplazo en 48 hrs ante falla</li>".
+				"</ul>",
+		],
+		[
+			'title' => 'SEDENA — Guerrero Frente 1, Sistema de Comunicaciones',
+			'aliases' => ['SEDENA Guerrero Frente 1','SEDENA – Guerrero Frente 1'],
+			'content' =>
+				"<h2>Suministro e Instalación de Sistema de Comunicaciones — Guerrero Frente 1</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> Oct 2022 / Nov 2022</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro e instalación de sistema de comunicaciones para instalaciones militares</li>".
+				"<li>Cableado estructurado Cat 6A para red de voz, datos y videovigilancia</li>".
+				"<li>Instalación de gabinetes de comunicaciones y switches administrables</li>".
+				"<li>Sistemas de CCTV con cámaras IP para perímetro e interiores</li>".
+				"<li>Sistemas de telefonía IP y servidor de comunicaciones</li>".
+				"<li>Torres de telecomunicaciones y antenas</li>".
+				"<li>UPS y sistemas de respaldo eléctrico</li>".
+				"</ul>",
+		],
+		[
+			'title' => 'SEDENA — Hidalgo Frente 1, Sistema de Comunicaciones',
+			'aliases' => ['SEDENA Hidalgo Frente 1','SEDENA – Hidalgo Frente 1'],
+			'content' =>
+				"<h2>Sistema de Comunicaciones para Instalaciones de Seguridad — Hidalgo Frente 1</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> Jun 2021 / Ago 2021</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro de sistema de comunicaciones para instalación de seguridad pública</li>".
+				"<li>Instalación de infraestructura de red de datos y voz</li>".
+				"<li>Sistema de videovigilancia CCTV IP con grabación centralizada</li>".
+				"<li>Telefonía IP con servidor PBX Asterisk</li>".
+				"<li>Switches administrables y equipamiento activo de red</li>".
+				"<li>Sistema de respaldo eléctrico (UPS) y reguladores</li>".
+				"<li>Instalación de torres de comunicaciones y antenas</li>".
+				"<li>Puesta en operación y capacitación</li>".
+				"</ul>",
+		],
+		[
+			'title' => 'SEDENA — Guerrero Frente 2 Chilapa, Sistema de Comunicaciones',
+			'aliases' => ['SEDENA Guerrero Frente 2 Chilapa','SEDENA – Guerrero Frente 2 Chilapa'],
+			'content' =>
+				"<h2>Sistema de Comunicaciones para Instalaciones de Seguridad — Guerrero Frente 2 Chilapa</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> Ago 2021 / Oct 2021</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro e instalación de equipo de comunicaciones en instalación militar</li>".
+				"<li>Infraestructura de cableado estructurado Cat 6A</li>".
+				"<li>Sistema de CCTV con grabación en red</li>".
+				"<li>Equipamiento de red: switches, gabinetes, patch panels</li>".
+				"<li>Nodos de datos, voz y videovigilancia</li>".
+				"<li>Configuración e integración de todos los sistemas</li>".
+				"</ul>",
+		],
+		[
+			'title' => 'SEDENA — Guerrero Frente 2 Iguala, Comunicaciones Voz y Datos',
+			'aliases' => ['SEDENA Guerrero Frente 2 Iguala','SEDENA – Guerrero Frente 2 Iguala'],
+			'content' =>
+				"<h2>Suministro de Equipo de Comunicaciones de Voz y Datos — Guerrero Frente 2 Iguala</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> Ene 2024</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Suministro de equipamiento de comunicaciones de voz y datos</li>".
+				"<li>Switches administrables de alta capacidad con PoE</li>".
+				"<li>Infraestructura de fibra óptica multimodo e interconexión</li>".
+				"<li>Sistema CCTV IP con cámaras exteriores e interiores</li>".
+				"<li>Gabinetes de telecomunicaciones y nodos de conexión</li>".
+				"<li>Grabadores de video en red con alta capacidad de almacenamiento</li>".
+				"<li>Telefonía IP con servidor SIP</li>".
+				"<li>Sistema de audio y sonorización de instalaciones</li>".
+				"<li>UPS y sistemas de protección eléctrica</li>".
+				"</ul>",
+		],
+		[
+			'title' => 'SEDENA — Guerrero Frente 4 Acapulco, Equipamiento Integral',
+			'aliases' => ['SEDENA Guerrero Frente 4 Acapulco','SEDENA – Guerrero Frente 4 Acapulco'],
+			'content' =>
+				"<h2>Suministro e Instalación de Equipo de Comunicaciones — Guerrero Frente 4, 2024</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> 03 May 2024 / 31 Jul 2024</p>".
+				"<p>Proyecto: Construcción y Equipamiento Coordinaciones Estatales, Batallones y Comandancias — Guerrero Frente 4, 2024. Predios San Agustín (Seguridad Veladero) y San Marcos (Alberca Costa Dorada).</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Gabinete sala de comunicaciones pared 24U × 2 piezas/predio — puerta frontal transparente, extractores, barra tierra, iluminación, organizadores, charolas, patch panel</li>".
+				"<li>Nodos dobles de datos: 6 piezas/predio — placa convexa 2 puertos RJ-45, cable FTP Cat 6A 100Ω LSZH</li>".
+				"<li>Nodos sencillos de videovigilancia: 23 piezas/predio — cable UTP Cat 6A LSZH conectado directamente a cámara MPTL</li>".
+				"<li>Nodos sencillos de voz: 5 piezas/predio — placa convexa 1 puerto RJ-45, cable UTP Cat 6A 100Ω LSZH</li>".
+				"<li>Switches administrables 48 puertos PoE 10/100/1000 1440W con 4 puertos fibra óptica × 2 piezas/predio</li>".
+				"<li>UPS 2.2 KVA para gabinete de comunicaciones en rack 42U con regulador × 2 piezas/predio</li>".
+				"<li>Pantallas LED 55\" Smart 4K UHD con soporte pared/techo × 1 pieza/predio</li>".
+				"<li>Torres de telecomunicaciones HF/UHF 15m, sección triangular 29-30cm × 1 pieza/predio</li>".
+				"<li>Sistema alarma sísmica VHF 162.400–162.550 MHz, PoE, bocinas exterior 30W × 1 pieza/predio</li>".
+				"<li>Sistema de videoconferencia codec H.323/SIP, cámara Full HD 1080p 88° × 1 pieza/predio</li>".
+				"<li>Cámaras CCTV exterior 2.1MP 30fps, PoE, IP66 IK10: 11 piezas/predio</li>".
+				"<li>Cámaras CCTV interior 2.1MP 30fps, PoE, IP66 IK10: 12 piezas/predio</li>".
+				"<li>Grabador NVR rack server 24TB, licencias para todas las cámaras × 1 pieza/predio</li>".
+				"<li>Sonorización Patio de Honor: rack anti-shock, mezcladora 16ch, amplificador 800W RMS, 4 bocinas 600W, micrófonos inalámbricos</li>".
+				"<li>Telefonía SIP con servidor Asterisk: teléfonos IP 2 RJ-45 PoE, 16 cuentas</li>".
+				"<li>Instalación, configuración, integración y puesta en marcha en sitio</li>".
+				"<li>Garantía de calidad 12 meses — reparación/sustitución en máx. 3 días naturales sin costo para SEDENA</li>".
+				"<li>4 facturas CFDI (524, 525, 551, 552) — pagadas por transferencia bancaria</li>".
+				"</ul>",
+		],
+		[
+			'title' => 'SEDENA — Guerrero Frente 3, Sistema Integral de Comunicaciones',
+			'aliases' => ['SEDENA Guerrero Frente 3','SEDENA – Guerrero Frente 3'],
+			'content' =>
+				"<h2>Adquisición de Sistema de Comunicación — Guerrero Frente 3, 2024</h2>".
+				"<p><strong>Cliente:</strong> SEDENA – DG Ingenieros — <strong>Sector:</strong> Seguridad Nacional — <strong>Período:</strong> 24 May 2024 / 14 Sep 2024</p>".
+				"<p>Construcción y Equipamiento Coordinaciones Estatales, Batallones y Comandancias, Estado de Guerrero, Frente 3, 2024. Total: $11,399,878.20 MXN — 6 facturas CFDI emitidas y pagadas mediante SPEI.</p>".
+				"<h3>Actividades y Servicios</h3><ul>".
+				"<li>Fibra óptica multimodo 6 hilos armada — 1,800 piezas (900m por enlace × 2 predios), escaneada y certificada</li>".
+				"<li>Gabinetes profundos 42U (2 piezas) para sala de comunicaciones con UPS, extractores, iluminación, patch panels</li>".
+				"<li>Gabinetes de pared 12U (4 piezas) para comunicaciones de área</li>".
+				"<li>Nodos dobles de datos (50 piezas) con Cat 6A FTP 100 ohms LSZH y conectores RJ-45 blindados</li>".
+				"<li>Nodos sencillos de videovigilancia (134 piezas) con cable MPTL Cat 6A directamente a cámaras</li>".
+				"<li>Nodos sencillos de voz (40 piezas) con Cat 6A LSZH estándar ANSI/TIA/EIA 568</li>".
+				"<li>Nodos sencillos de videoconferencia (4 piezas) y nodos de control ACC (8 piezas)</li>".
+				"<li>Switches administrables 48 puertos PoE 10/100/1000 1440W (10 piezas)</li>".
+				"<li>UPS 2.2 KVA para gabinete (2 piezas) y UPS 1.5 KVA de torre (6 piezas)</li>".
+				"<li>Laptops para proyección: Intel/AMD 4 núcleos, 8GB RAM, 1TB SSD, Win10 Pro (2 piezas)</li>".
+				"<li>Pantallas LED 55\" Smart 4K UHD con soporte pared/techo (12 piezas)</li>".
+				"<li>Kits de seguridad para depósito de armas: panel alarma, sirena 120dB, sensores inalámbricos (8 piezas)</li>".
+				"<li>Equipo de sonido profesional: rack anti-shock, amplificador 2ch 800W, mezcladora 16ch, bocinas 600W (2 piezas)</li>".
+				"<li>Servidor SIP con Asterisk, IVR, ACD, interfaz Issabel 4.0 (2 piezas)</li>".
+				"<li>Teléfonos IP ejecutivos (8 piezas) y teléfonos IP comunes (32 piezas)</li>".
+				"<li>Torres de telecomunicaciones 15m con lámparas obstrucción aviación y pararrayos (2 piezas)</li>".
+				"<li>Sistemas de alarma sísmica radio receptor VHF/UHF, CEA2009B y SAME (2 piezas)</li>".
+				"<li>Unidades de videoconferencia codec H.323/SIP, cámara Full HD 88° con cancelación de eco (4 piezas)</li>".
+				"<li>Cámaras CCTV exterior (80 piezas) y cámaras CCTV interior (42 piezas) 2.1MP 30fps PoE IP66/IK10</li>".
+				"<li>Cámaras IP domo 360° 4K 3840×2160 PoE interior/exterior H.265 (12 piezas)</li>".
+				"<li>Extensores de alimentación PoE compatibles con cámaras exteriores (30 piezas)</li>".
+				"<li>Grabadores de video en red rack-server 24TB con licencias para todas las cámaras (2 piezas)</li>".
+				"<li>Estación de monitoreo CCTV con Axis Camera Station, CPU Intel/AMD 4 núcleos, SSD 1TB (2 piezas)</li>".
+				"<li>Equipo de sonido para sala de juntas: amplificador 2ch 500W, mezcladora 12ch, bocinas de plafón 30W (2 piezas)</li>".
+				"<li>Sistema de audio Home Theater 5.1 con Blu-Ray y HDMI (2 piezas)</li>".
+				"<li>Instalación, configuración, integración y puesta en operación en 2 predios</li>".
+				"<li>Garantía de calidad 12 meses, reemplazo en 48 hrs, sin costo para SEDENA</li>".
+				"</ul>",
+		],
 	];
 
 	foreach ($case_entries as $ce) {
@@ -234,9 +399,9 @@ add_action('admin_init', function(){
 
 	// Testimonios demo
 	$tests = [
-		['Gerente de Operaciones, Hotel Cancún', '“El equipo de SITEC no solo implementó tecnología, sino que mejoró la experiencia de nuestros huéspedes. La conectividad y seguridad superaron expectativas.”'],
-		['Administrador, Condominio CDMX', '“Gracias a SITEC, nuestro condominio redujo en un 35% los costos operativos y los residentes se sienten más seguros.”'],
-		['Director, Plaza Milenium', '“Con SITEC logramos reducir incidentes en un 45% y mejorar la satisfacción de los clientes.”'],
+		['Gerente de Operaciones, Hotel Cancún', '"El equipo de SITEC no solo implementó tecnología, sino que mejoró la experiencia de nuestros huéspedes. La conectividad y seguridad superaron expectativas."'],
+		['Administrador, Condominio CDMX', '"Gracias a SITEC, nuestro condominio redujo en un 35% los costos operativos y los residentes se sienten más seguros."'],
+		['Director, Plaza Milenium', '"Con SITEC logramos reducir incidentes en un 45% y mejorar la satisfacción de los clientes."'],
 	];
 	foreach ($tests as $t) { $upsert('testimonial', $t[0], $t[1], $t[1]); }
 
@@ -410,7 +575,7 @@ add_action('admin_init', function(){
 add_action('admin_notices', function(){
     if (!current_user_can('manage_options')) return;
     if (empty($_GET['sitec_clean_front_done'])) return;
-    echo '<div class="notice notice-success is-dismissible"><p>Contenido del editor en “Inicio” limpiado. La portada seguirá usando las secciones del tema.</p></div>';
+    echo '<div class="notice notice-success is-dismissible"><p>Contenido del editor en "Inicio" limpiado. La portada seguirá usando las secciones del tema.</p></div>';
 });
 
 // Metabox en la edición de Página para sembrar bloques solo en esa página (principalmente "Inicio")
@@ -419,7 +584,7 @@ add_action('add_meta_boxes', function(){
         if (!current_user_can('manage_options')) return;
         $front_id = (int) get_option('page_on_front');
         if ((int)$post->ID !== $front_id) {
-            echo '<p>' . esc_html__('Este botón está disponible solo para la página establecida como “Inicio”.','sitec') . '</p>';
+            echo '<p>' . esc_html__('Este botón está disponible solo para la página establecida como "Inicio".','sitec') . '</p>';
             return;
         }
         $url = add_query_arg(['sitec_seed_page' => (int)$post->ID], admin_url('post.php?post='.(int)$post->ID.'&action=edit'));

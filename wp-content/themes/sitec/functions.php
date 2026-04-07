@@ -1,13 +1,25 @@
 <?php
 add_action('wp_enqueue_scripts', function() {
-	wp_enqueue_style('sitec-style', get_stylesheet_uri(), [], '0.1.0');
+	wp_enqueue_style('sitec-style', get_stylesheet_uri(), [], '0.2.0');
 	$css = get_stylesheet_directory_uri() . '/assets/css/main.css';
-	wp_enqueue_style('sitec-main', $css, ['sitec-style'], '0.1.0');
+	wp_enqueue_style('sitec-main', $css, ['sitec-style'], '0.2.0');
 	$overrides = get_stylesheet_directory_uri() . '/assets/css/overrides.css';
-	wp_enqueue_style('sitec-overrides', $overrides, ['sitec-main'], '0.1.0');
+	wp_enqueue_style('sitec-overrides', $overrides, ['sitec-main'], '0.2.0');
 	// Partners slider JS
 	$partners_js = get_stylesheet_directory_uri() . '/assets/js/partners-slider.js';
-	wp_enqueue_script('sitec-partners-slider', $partners_js, [], '0.1.0', true);
+	wp_enqueue_script('sitec-partners-slider', $partners_js, [], '0.2.0', true);
+	// UI interactivo: menú móvil, scroll reveal, contadores
+	$ui_js = get_stylesheet_directory_uri() . '/assets/js/sitec-ui.js';
+	wp_enqueue_script('sitec-ui', $ui_js, [], '0.2.0', true);
+	// Chatbot widget
+	$chat_css = get_stylesheet_directory_uri() . '/assets/css/sitec-chat.css';
+	wp_enqueue_style('sitec-chat', $chat_css, [], '0.2.0');
+	$chat_js = get_stylesheet_directory_uri() . '/assets/js/sitec-chat.js';
+	wp_enqueue_script('sitec-chat', $chat_js, [], '0.2.0', true);
+	wp_localize_script('sitec-chat', 'sitecChat', [
+		'ajaxUrl' => admin_url('admin-ajax.php'),
+		'nonce'   => wp_create_nonce('sitec_chat_lead'),
+	]);
 });
 
 add_action('after_setup_theme', function(){
@@ -15,8 +27,8 @@ add_action('after_setup_theme', function(){
 	add_theme_support('post-thumbnails');
 	add_theme_support('html5', ['search-form','comment-form','comment-list','gallery','caption','style','script']);
 	add_theme_support('custom-logo', [
-		'height'      => 64,
-		'width'       => 180,
+		'height'      => 36,
+		'width'       => 160,
 		'flex-height' => true,
 		'flex-width'  => true,
 		'header-text' => ['site-title', 'site-description']
@@ -61,6 +73,9 @@ if ( file_exists( get_stylesheet_directory() . '/inc/robots.php' ) ) {
 }
 if ( file_exists( get_stylesheet_directory() . '/inc/chatbot.php' ) ) {
 	require_once get_stylesheet_directory() . '/inc/chatbot.php';
+}
+if ( file_exists( get_stylesheet_directory() . '/inc/chat-lead.php' ) ) {
+	require_once get_stylesheet_directory() . '/inc/chat-lead.php';
 }
 
 // Shortcodes para insertar secciones de la Home como bloques

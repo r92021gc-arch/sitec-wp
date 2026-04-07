@@ -1,0 +1,338 @@
+/* ============================================================
+   SITEC Chat Widget
+   ============================================================ */
+
+/* ── Variables ── */
+:root {
+    --chat-primary:   #10b981;
+    --chat-primary-d: #059669;
+    --chat-dark:      #0f172a;
+    --chat-gray:      #f1f5f9;
+    --chat-text:      #1e293b;
+    --chat-muted:     #64748b;
+    --chat-white:     #ffffff;
+    --chat-radius:    16px;
+    --chat-shadow:    0 8px 40px rgba(0,0,0,0.18);
+    --chat-w:         360px;
+    --chat-h:         520px;
+}
+
+/* ── Botón flotante ── */
+#sitec-chat-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9998;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--chat-primary);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(16,185,129,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#sitec-chat-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(16,185,129,0.6);
+}
+#sitec-chat-btn svg { transition: transform 0.3s ease; }
+#sitec-chat-btn.is-open .chat-icon-open  { display: none; }
+#sitec-chat-btn.is-open .chat-icon-close { display: block; }
+#sitec-chat-btn:not(.is-open) .chat-icon-open  { display: block; }
+#sitec-chat-btn:not(.is-open) .chat-icon-close { display: none; }
+
+/* Pulso de notificación */
+.sitec-chat-pulse {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    background: #ef4444;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: chat-pulse 2s infinite;
+}
+@keyframes chat-pulse {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50%      { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* ── Ventana del chat ── */
+#sitec-chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    z-index: 9997;
+    width: var(--chat-w);
+    height: var(--chat-h);
+    max-height: calc(100vh - 110px);
+    background: var(--chat-white);
+    border-radius: var(--chat-radius);
+    box-shadow: var(--chat-shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin: bottom right;
+    transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease;
+}
+#sitec-chat-window.chat-hidden {
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ── Header del chat ── */
+.sitec-chat-header {
+    background: linear-gradient(135deg, var(--chat-dark) 0%, #1e3a5f 100%);
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.sitec-chat-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--chat-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+}
+.sitec-chat-header-info { flex: 1; }
+.sitec-chat-header-name {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+.sitec-chat-header-status {
+    font-size: 0.75rem;
+    color: #6ee7b7;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+}
+.sitec-chat-header-status::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #6ee7b7;
+    animation: chat-pulse 2s infinite;
+}
+.sitec-chat-close {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: rgba(255,255,255,0.8);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+    flex-shrink: 0;
+}
+.sitec-chat-close:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+/* ── Área de mensajes ── */
+.sitec-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+.sitec-chat-messages::-webkit-scrollbar { width: 4px; }
+.sitec-chat-messages::-webkit-scrollbar-track { background: transparent; }
+.sitec-chat-messages::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+/* Mensajes del bot */
+.chat-msg {
+    display: flex;
+    gap: 8px;
+    animation: chat-msg-in 0.25s ease;
+}
+@keyframes chat-msg-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.chat-msg-bot { align-items: flex-start; }
+.chat-msg-user { align-items: flex-end; flex-direction: row-reverse; }
+.chat-msg-bot-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--chat-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.chat-bubble {
+    max-width: 82%;
+    padding: 10px 13px;
+    border-radius: 14px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+.chat-msg-bot  .chat-bubble {
+    background: var(--chat-gray);
+    color: var(--chat-text);
+    border-bottom-left-radius: 4px;
+}
+.chat-msg-user .chat-bubble {
+    background: var(--chat-primary);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+/* Indicador de escritura */
+.chat-typing .chat-bubble {
+    padding: 12px 14px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.chat-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--chat-muted);
+    border-radius: 50%;
+    animation: chat-bounce 1.2s infinite;
+}
+.chat-dot:nth-child(2) { animation-delay: 0.2s; }
+.chat-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes chat-bounce {
+    0%,60%,100% { transform: translateY(0); }
+    30%          { transform: translateY(-5px); }
+}
+
+/* Quick replies */
+.chat-quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px 0 2px 36px;
+    animation: chat-msg-in 0.25s ease;
+}
+.chat-quick-reply {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1.5px solid var(--chat-primary);
+    background: transparent;
+    color: var(--chat-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+.chat-quick-reply:hover {
+    background: var(--chat-primary);
+    color: white;
+}
+
+/* ── Formulario de contacto ── */
+.sitec-chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 4px 0;
+    animation: chat-msg-in 0.3s ease;
+}
+.sitec-chat-form input,
+.sitec-chat-form textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--chat-text);
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s;
+    box-sizing: border-box;
+}
+.sitec-chat-form input:focus,
+.sitec-chat-form textarea:focus { border-color: var(--chat-primary); }
+.sitec-chat-form textarea { resize: none; height: 64px; }
+.sitec-chat-form-submit {
+    padding: 10px;
+    background: var(--chat-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.sitec-chat-form-submit:hover  { background: var(--chat-primary-d); }
+.sitec-chat-form-submit:disabled { opacity: 0.6; cursor: wait; }
+.sitec-chat-form-error {
+    font-size: 0.8rem;
+    color: #ef4444;
+    text-align: center;
+}
+
+/* ── Footer: input de texto libre ── */
+.sitec-chat-footer {
+    border-top: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    background: #fff;
+}
+.sitec-chat-input {
+    flex: 1;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.15s;
+    color: var(--chat-text);
+}
+.sitec-chat-input:focus { border-color: var(--chat-primary); }
+.sitec-chat-input::placeholder { color: #94a3b8; }
+.sitec-chat-send {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--chat-primary);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.15s, transform 0.15s;
+}
+.sitec-chat-send:hover { background: var(--chat-primary-d); transform: scale(1.05); }
+.sitec-chat-send svg { color: white; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+    :root { --chat-w: calc(100vw - 16px); }
+    #sitec-chat-window { right: 8px; bottom: 80px; }
+    #sitec-chat-btn    { right: 16px; bottom: 16px; }
+}
