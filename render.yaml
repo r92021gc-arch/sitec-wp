@@ -4,26 +4,22 @@ services:
     runtime: docker
     plan: starter
     envVars:
-      - key: DB_NAME
-        fromService:
-          type: pserv
-          name: sitec-mysql
-          property: databaseName
-      - key: DB_USER
-        fromService:
-          type: pserv
-          name: sitec-mysql
-          property: user
-      - key: DB_PASSWORD
-        fromService:
-          type: pserv
-          name: sitec-mysql
-          property: password
       - key: DB_HOST
         fromService:
           type: pserv
           name: sitec-mysql
           property: host
+      - key: DB_PORT
+        fromService:
+          type: pserv
+          name: sitec-mysql
+          property: port
+      - key: DB_NAME
+        value: wordpress
+      - key: DB_USER
+        value: wordpress
+      - key: DB_PASSWORD
+        generateValue: true
       - key: WP_HOME
         value: https://sitec-wordpress.onrender.com
       - key: WP_SITEURL
@@ -38,14 +34,14 @@ services:
     env: docker
     plan: starter
     dockerCommand: >-
-      bash -lc "docker-entrypoint.sh mysqld --default-authentication-plugin=mysql_native_password"
+      bash -lc "docker-entrypoint.py mysqld"
     repo: https://github.com/render-examples/mysql
     branch: main
     envVars:
       - key: MYSQL_DATABASE
-        generateValue: true
+        value: wordpress
       - key: MYSQL_USER
-        generateValue: true
+        value: wordpress
       - key: MYSQL_PASSWORD
         generateValue: true
       - key: MYSQL_ROOT_PASSWORD
