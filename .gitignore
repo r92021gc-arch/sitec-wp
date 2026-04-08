@@ -27,6 +27,7 @@ wp-content/backups/
 wp-content/backup-*/
 wp-content/plugins/**/vendor/
 !wp-content/plugins/pg4wp/
+!wp-content/pg4wp/
 
 # Secrets
 .env
