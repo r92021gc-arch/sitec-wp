@@ -2,24 +2,16 @@ services:
   - type: web
     name: sitec-wordpress
     runtime: docker
-    plan: starter
+    plan: free
     envVars:
       - key: DB_HOST
-        fromService:
-          type: pserv
-          name: sitec-mysql
-          property: host
-      - key: DB_PORT
-        fromService:
-          type: pserv
-          name: sitec-mysql
-          property: port
+        sync: false
       - key: DB_NAME
-        value: wordpress
+        sync: false
       - key: DB_USER
-        value: wordpress
+        sync: false
       - key: DB_PASSWORD
-        generateValue: true
+        sync: false
       - key: WP_HOME
         value: https://sitec-wordpress.onrender.com
       - key: WP_SITEURL
@@ -28,25 +20,3 @@ services:
         value: "1"
       - key: FORCE_SSL_ADMIN
         value: "1"
-
-  - type: pserv
-    name: sitec-mysql
-    env: docker
-    plan: starter
-    dockerCommand: >-
-      bash -lc "docker-entrypoint.py mysqld"
-    repo: https://github.com/render-examples/mysql
-    branch: main
-    envVars:
-      - key: MYSQL_DATABASE
-        value: wordpress
-      - key: MYSQL_USER
-        value: wordpress
-      - key: MYSQL_PASSWORD
-        generateValue: true
-      - key: MYSQL_ROOT_PASSWORD
-        generateValue: true
-    disk:
-      name: mysql-data
-      mountPath: /var/lib/mysql
-      sizeGB: 10
