@@ -5,7 +5,7 @@ services:
     plan: free
     envVars:
       - key: DB_HOST
-        value: dpg-d7bbs2k9c44c73akdvvg-a
+        value: dpg-d7bbs2k9c44c73akdvvg-a.oregon-postgres.render.com
       - key: DB_PORT
         value: "5432"
       - key: DB_NAME
