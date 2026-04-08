@@ -18,10 +18,12 @@ services:
         value: utf8
       - key: DB_DRIVER
         value: pgsql
+      - key: DB_SSL
+        value: require
       - key: WP_HOME
-        value: https://sitec-wordpress.onrender.com
+        value: https://sitec-wp-s6uo.onrender.com
       - key: WP_SITEURL
-        value: https://sitec-wordpress.onrender.com
+        value: https://sitec-wp-s6uo.onrender.com
       - key: DISABLE_WP_CRON
         value: "1"
       - key: FORCE_SSL_ADMIN

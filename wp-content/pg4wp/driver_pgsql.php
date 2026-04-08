@@ -102,7 +102,9 @@ function wpsqli_real_connect(&$connection, $hostname = null, $username = null, $
 
     // Must connect to a specific database unlike MySQL
     $dbname = defined('DB_NAME') && DB_NAME ? DB_NAME : $database;
-    $pg_connstr = $GLOBALS['pg4wp_connstr'] . ' dbname=' . $dbname;
+    // Force SSL when required (e.g. Render PostgreSQL)
+    $sslmode = (getenv('DB_SSL') === 'require') ? ' sslmode=require' : '';
+    $pg_connstr = $GLOBALS['pg4wp_connstr'] . ' dbname=' . $dbname . $sslmode;
     $GLOBALS['pg4wp_conn'] = $connection = pg_connect($pg_connstr);
 
     return $connection;
