@@ -58,17 +58,19 @@ define( 'DB_NAME',     _sitec_env('DB_NAME',     'db_sitecweb') );
 define( 'DB_USER',     _sitec_env('DB_USER',     'root') );
 define( 'DB_PASSWORD', _sitec_env('DB_PASSWORD', '') );
 
-// Si hay DB_PORT, incluirlo en DB_HOST (formato que espera WordPress: host:puerto)
+// Incluir puerto en DB_HOST si viene como variable separada
 $_sitec_host = _sitec_env('DB_HOST', 'localhost');
 $_sitec_port = _sitec_env('DB_PORT', '');
-if ( $_sitec_port !== '' && $_sitec_port !== '3306' && strpos($_sitec_host, ':') === false ) {
+if ( $_sitec_port !== '' && strpos($_sitec_host, ':') === false ) {
     $_sitec_host .= ':' . $_sitec_port;
 }
 define( 'DB_HOST', $_sitec_host );
 unset($_sitec_host, $_sitec_port);
 
-/** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+/** Database charset — PostgreSQL usa utf8, MySQL usa utf8mb4 */
+$_sitec_charset = _sitec_env('DB_CHARSET', 'utf8mb4');
+define( 'DB_CHARSET', $_sitec_charset );
+unset($_sitec_charset);
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );

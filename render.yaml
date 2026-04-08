@@ -5,15 +5,17 @@ services:
     plan: free
     envVars:
       - key: DB_HOST
-        value: 4cn58h.h.filess.io
+        value: dpg-d7bbs2k9c44c73akdvvg-a
       - key: DB_PORT
-        value: "3306"
+        value: "5432"
       - key: DB_NAME
-        value: sitec_finalthose
+        value: sitec_4k8b
       - key: DB_USER
-        value: sitec_finalthose
+        value: sitec
       - key: DB_PASSWORD
-        value: dfb50b40271eda1b9317e6fed5b5989846de3a97
+        value: 09hUQOGbvvNVuImfEUBOABWFnlYfPR8X
+      - key: DB_CHARSET
+        value: utf8
       - key: WP_HOME
         value: https://sitec-wordpress.onrender.com
       - key: WP_SITEURL
