@@ -7,10 +7,11 @@ RUN apt-get update \
        libpng-dev libjpeg-dev libwebp-dev libfreetype6-dev \
        libzip-dev zlib1g-dev libicu-dev \
        imagemagick libmagickwand-dev \
+       libpq-dev \
        curl ca-certificates \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install -j$(nproc) gd zip intl mysqli opcache
+    && docker-php-ext-install -j$(nproc) gd zip intl mysqli opcache pgsql pdo pdo_pgsql
 
 # Enable Apache mods commonly needed
 RUN a2enmod rewrite headers include
