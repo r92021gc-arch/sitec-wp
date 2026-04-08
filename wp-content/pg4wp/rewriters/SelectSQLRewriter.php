@@ -41,7 +41,17 @@ class SelectSQLRewriter extends AbstractSQLRewriter
                 return $sql;
             }
 
-            throw new Exception("Unsupported call to information_schema, this probably won't work correctly and needs to be specifically handled, open a github issue with the SQL");
+            // Convertir consultas MySQL information_schema a PostgreSQL
+            // DATABASE() → current_schema(), backticks → sin nada, TABLES → tables
+            $sql = str_ireplace('information_schema.TABLES', 'information_schema.tables', $sql);
+            $sql = str_ireplace('information_schema.COLUMNS', 'information_schema.columns', $sql);
+            $sql = str_replace('DATABASE()', 'current_schema()', $sql);
+            $sql = str_replace('`', '', $sql);
+            // TABLE_SCHEMA en PG es table_schema
+            $sql = str_ireplace('TABLE_SCHEMA', 'table_schema', $sql);
+            $sql = str_ireplace('TABLE_NAME', 'table_name', $sql);
+            $sql = str_ireplace('COLUMN_NAME', 'column_name', $sql);
+            return $sql;
         }
 
         $sql = $this->ensureOrderByInSelect($sql);
