@@ -5,8 +5,14 @@
 		<article <?php post_class('prose prose-slate max-w-none'); ?>>
 			<header class="mb-8">
 				<h1 class="text-3xl md:text-4xl font-bold leading-tight"><?php the_title(); ?></h1>
-				<?php if ( has_post_thumbnail() ) : ?>
+				<?php
+                $acf_icon = function_exists('get_field') ? get_field('icon') : null;
+                $acf_icon_url = !empty($acf_icon['url']) ? $acf_icon['url'] : '';
+                $acf_icon_alt = !empty($acf_icon['alt']) ? $acf_icon['alt'] : get_the_title();
+                if ( has_post_thumbnail() ) : ?>
 					<div class="mt-6"><?php the_post_thumbnail('large', ['class' => 'w-full h-auto rounded-lg']); ?></div>
+				<?php elseif ($acf_icon_url): ?>
+                    <div class="mt-6"><img src="<?php echo esc_url($acf_icon_url); ?>" alt="<?php echo esc_attr($acf_icon_alt); ?>" class="w-full h-auto rounded-lg" /></div>
 				<?php endif; ?>
 			</header>
 			<div class="entry-content">

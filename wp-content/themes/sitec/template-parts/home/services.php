@@ -84,11 +84,36 @@ $q = new WP_Query($args);
             <article class="sitec-reveal group flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                 <!-- Imagen -->
                 <div class="relative overflow-hidden h-44 bg-slate-100">
-                    <?php if (has_post_thumbnail()): ?>
+                    <?php
+                    $acf_icon = function_exists('get_field') ? get_field('icon') : null;
+                    $acf_icon_url = !empty($acf_icon['url']) ? $acf_icon['url'] : '';
+                    $acf_icon_alt = !empty($acf_icon['alt']) ? $acf_icon['alt'] : get_the_title();
+                    if (has_post_thumbnail()): ?>
                         <?php the_post_thumbnail('medium', ['class' => 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105']); ?>
-                    <?php else: ?>
-                        <div class="w-full h-full flex items-center justify-center text-slate-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+                    <?php elseif ($acf_icon_url): ?>
+                        <img src="<?php echo esc_url($acf_icon_url); ?>" alt="<?php echo esc_attr($acf_icon_alt); ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <?php else:
+                        $title_lower = mb_strtolower(get_the_title());
+                        // Detectar tipo de servicio por palabras clave
+                        if (str_contains($title_lower, 'seguridad') || str_contains($title_lower, 'ia') || str_contains($title_lower, 'inteligencia') || str_contains($title_lower, 'protec')) {
+                            $grad = 'from-slate-800 to-blue-900';
+                            $icon_svg = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.955 11.955 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>';
+                        } elseif (str_contains($title_lower, 'conectiv') || str_contains($title_lower, '5g') || str_contains($title_lower, 'red') || str_contains($title_lower, 'infraestructura') || str_contains($title_lower, 'generaci')) {
+                            $grad = 'from-emerald-700 to-teal-900';
+                            $icon_svg = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"/>';
+                        } elseif (str_contains($title_lower, 'energ') || str_contains($title_lower, 'eficiencia') || str_contains($title_lower, 'costo') || str_contains($title_lower, 'ahorro')) {
+                            $grad = 'from-amber-600 to-orange-800';
+                            $icon_svg = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>';
+                        } elseif (str_contains($title_lower, 'asesor') || str_contains($title_lower, 'estrateg') || str_contains($title_lower, 'transformac') || str_contains($title_lower, 'consultor')) {
+                            $grad = 'from-violet-700 to-purple-900';
+                            $icon_svg = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6.75v6.75"/>';
+                        } else {
+                            $grad = 'from-slate-700 to-slate-900';
+                            $icon_svg = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/>';
+                        }
+                    ?>
+                        <div class="w-full h-full bg-gradient-to-br <?php echo $grad; ?> flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><?php echo $icon_svg; ?></svg>
                         </div>
                     <?php endif; ?>
                     <!-- Tag superior -->

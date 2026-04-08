@@ -117,6 +117,7 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+
 // ===== Ajustes de publicación / producción =====
 // Detección simple de entorno (puedes establecer WP_ENVIRONMENT_TYPE en el host)
 if ( ! defined('WP_ENVIRONMENT_TYPE') ) {

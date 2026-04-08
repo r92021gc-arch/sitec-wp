@@ -12,8 +12,14 @@
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class('rounded-xl border border-slate-200 p-6 shadow-sm'); ?>>
-				<?php if ( has_post_thumbnail() ) : ?>
+				<?php
+                $acf_icon = function_exists('get_field') ? get_field('icon') : null;
+                $acf_icon_url = !empty($acf_icon['url']) ? $acf_icon['url'] : '';
+                $acf_icon_alt = !empty($acf_icon['alt']) ? $acf_icon['alt'] : get_the_title();
+                if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail('large', ['class' => 'w-full h-48 object-cover rounded-md']); ?>
+				<?php elseif ($acf_icon_url): ?>
+                    <img src="<?php echo esc_url($acf_icon_url); ?>" alt="<?php echo esc_attr($acf_icon_alt); ?>" class="w-full h-48 object-cover rounded-md" />
 				<?php endif; ?>
 				<h2 class="mt-4 font-semibold text-lg"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<p class="mt-2 text-slate-600"><?php echo esc_html( get_the_excerpt() ); ?></p>
