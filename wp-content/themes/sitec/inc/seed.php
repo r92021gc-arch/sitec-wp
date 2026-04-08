@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Endpoint protegido por nonce para crear contenido demo
 add_action('admin_init', function(){
 	if (!current_user_can('manage_options')) return;
