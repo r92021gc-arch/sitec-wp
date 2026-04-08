@@ -391,6 +391,7 @@ add_action(
 						'aiStage2'                       => Flags::getSetting( 'aiStage2', false ),
 						'advancedMode'                   => Flags::getSetting( 'advancedMode', true ),
 						'featuresVersion'                => Flags::getSetting( 'featuresVersion', 1 ),
+						'allowSiteLeadsRecommendations'  => Flags::getSetting( 'allowSiteLeadsRecommendations', false ),
 						'siteName'                       => get_bloginfo( 'name' ),
 						'wpAdminUpgradePage'             => add_query_arg(
 							array(

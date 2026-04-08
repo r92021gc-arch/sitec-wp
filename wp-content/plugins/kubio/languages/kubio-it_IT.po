@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-11T11:33:25+03:00\n"
+"POT-Creation-Date: 2026-04-02T13:04:43+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.12.0\n"
@@ -106,7 +106,7 @@ msgstr "Y"
 #: build/block-library/blocks/page-title/index.php:78
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "Archivio mensile %1$s"
+msgstr "Archivio mensile %s"
 
 #. translators: Daily archive title. 1: Date
 #: build/block-library/blocks/page-title/index.php:82
@@ -296,7 +296,7 @@ msgstr "Hai bisogno di autorizzazioni più elevate."
 
 #: lib/admin-pages/main-page/demo-sites.php:16
 msgid "Current user is not allowed to import starter sites. This feature is available only for administrators"
-msgstr "Non hai il permesso di importare siti di avvio. Questa funzionalità è disponibile solo per gli amministratori"
+msgstr "Non hai il permesso di importare siti di avvio. Questa funzionalità è disponibile solo per gli amministratori."
 
 #: lib/admin-pages/main-page/demo-sites.php:31
 msgid "Retrieving starter sites..."
@@ -368,7 +368,7 @@ msgstr "Disponibile solo con Kubio PRO"
 #: lib/admin-pages/main-page/demo-sites.php:149
 #: build/block-editor/index.js:11
 #: build/block-editor/index.js:23
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/controls/index.js:53
 #: build/editor/index.js:1
@@ -509,7 +509,7 @@ msgstr "<strong>50+ Blocchi Avanzati</strong> - Aggiungi slider, tabelle dei pre
 
 #: lib/admin-pages/main-page/upgrade-pro.php:72
 msgid "<strong>340+ Pre-Designed Sections</strong> - Choose from professionally crafted layouts for faster design."
-msgstr "<strong>Oltre 340 sezioni pre-progettate</strong> - Scegli tra layout realizzati professionalmente per un design più veloce."
+msgstr "<strong>Oltre 340 sezioni pre-progettate</strong> - Scegli tra layout professionali per un design più veloce."
 
 #: lib/admin-pages/main-page/upgrade-pro.php:73
 msgid "<strong>Multiple Headers & Footers</strong> - Fully customize headers, footers, and templates."
@@ -517,7 +517,7 @@ msgstr "<strong>Intestazioni e piè di pagina multipli</strong> - Personalizza c
 
 #: lib/admin-pages/main-page/upgrade-pro.php:74
 msgid "<strong>Premium Support & Updates</strong> - We got you covered with priority support and continuous enhancements."
-msgstr "<strong>Supporto e Aggiornamenti Premium</strong> - Ti abbiamo coperto con supporto prioritario e miglioramenti continui."
+msgstr "<strong>Supporto Premium e Aggiornamenti</strong> - Ti abbiamo coperto con supporto prioritario e miglioramenti continui."
 
 #: lib/admin-pages/pages.php:59
 #: build/pro/index.js:1
@@ -562,8 +562,8 @@ msgstr "Modello 3D"
 #. translators: 1: The side of the block being modified (top, bottom, left etc.). 2. Type of spacing being modified (padding, margin, etc).
 #. translators: %s: file name
 #: lib/AI/SDApi/KubioImagePrompts.php:15
-#: build/block-editor/index.js:100
-#: build/block-editor/index.js:110
+#: build/block-editor/index.js:104
+#: build/block-editor/index.js:114
 #: build/controls/index.js:53
 msgid "Background image"
 msgstr "Immagine di sfondo"
@@ -578,7 +578,7 @@ msgid "Artistic painting"
 msgstr "Pittura artistica"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:24
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/editor/index.js:55
 msgid "Landscape"
@@ -589,7 +589,7 @@ msgid "Macro"
 msgstr "Macro"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:26
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/editor/index.js:55
 msgid "Portrait"
@@ -625,7 +625,7 @@ msgid "Floral"
 msgstr "Floreale"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:40
-#: build/block-editor/index.js:100
+#: build/block-editor/index.js:104
 #: build/controls/index.js:15
 #: build/controls/index.js:53
 #: build/controls/index.js:55
@@ -731,7 +731,7 @@ msgstr "Formale"
 
 #: lib/AI/utils.php:78
 msgid "Used in official documents, academic papers, and professional communication, characterized by complex sentence structures, precise vocabulary, and avoidance of contractions and slang."
-msgstr "Usato in documenti ufficiali, lavori accademici e comunicazioni professionali, caratterizzato da strutture di frasi complesse, vocabolario preciso e evitamento di contrazioni e gergo."
+msgstr "Usato in documenti ufficiali, lavori accademici e comunicazioni professionali, caratterizzato da strutture di frasi complesse, vocabolario preciso e evitando contrazioni e gergo."
 
 #: lib/AI/utils.php:81
 msgid "Informal"
@@ -790,7 +790,7 @@ msgstr "Consulenza"
 
 #: lib/AI/utils.php:116
 msgid "Offering expert advice, insights, and solutions in specialized fields."
-msgstr "Offrire consigli, spunti e soluzioni esperti in campi specializzati."
+msgstr "Offrire consigli, idee e soluzioni di esperti in campi specializzati."
 
 #: lib/AI/utils.php:120
 msgid "Art / Design Portfolio"
@@ -854,7 +854,7 @@ msgstr "Moda e bellezza"
 
 #: lib/AI/utils.php:162
 msgid "Showcasing the latest fashion trends, beauty tips, and style advice."
-msgstr "Mostrando le ultime tendenze della moda, consigli di bellezza e suggerimenti di stile."
+msgstr "Mostrando le ultime tendenze della moda, consigli di bellezza e consigli di stile."
 
 #: lib/AI/utils.php:166
 msgid "Technology & Gadgets"
@@ -870,7 +870,7 @@ msgstr "Giochi"
 
 #: lib/AI/utils.php:174
 msgid "Exploring the world of gaming, video games, and esports."
-msgstr "Esplorando il mondo del gaming, dei videogiochi e degli esports."
+msgstr "Esplorando il mondo del gioco, dei videogiochi e degli sport elettronici."
 
 #. translators: %s is the error message
 #: lib/AI/utils.php:410
@@ -884,7 +884,7 @@ msgstr "La risposta dell'IA non è valida"
 
 #: lib/AI/utils.php:484
 msgid "AI response is invalid ( Empty response )"
-msgstr "La risposta dell'IA non è valida (risposta vuota)"
+msgstr "La risposta dell'IA non è valida (Risposta vuota)"
 
 #: lib/api/colibri.php:107
 #: lib/api/colibri.php:168
@@ -918,24 +918,6 @@ msgstr "Il contenuto attuale dell'articolo è vuoto. Viene visualizzato un testo
 msgid "Api key not found"
 msgstr "Chiave API non trovata"
 
-#: lib/api/recommendations/bubble-chat.php:64
-#: lib/api/recommendations/bubble-chat.php:116
-msgid "Required plugin is missing"
-msgstr "Il plugin richiesto manca"
-
-#: lib/api/recommendations/bubble-chat.php:70
-#: lib/api/recommendations/bubble-chat.php:122
-msgid "Required class or functions are missing"
-msgstr "Classe o funzioni richieste mancanti"
-
-#: lib/api/recommendations/bubble-chat.php:93
-msgid "Kubio Widget"
-msgstr "Widget Kubio"
-
-#: lib/api/recommendations/bubble-chat.php:143
-msgid "Widget not found"
-msgstr "Widget non trovato"
-
 #: lib/api/recommendations/contact-forms.php:47
 msgid "Contact Form plugin is not active!"
 msgstr "Il plugin Modulo di contatto non è attivo!"
@@ -951,7 +933,7 @@ msgstr "Contenuto della pagina non trovato per il plugin specificato"
 
 #: lib/api/recommendations/index.php:84
 msgid "Plugin slug is required"
-msgstr "Lo slug del plugin è obbligatorio"
+msgstr "Il plugin slug è richiesto"
 
 #: lib/api/recommendations/index.php:94
 #: lib/api/recommendations/index.php:101
@@ -979,6 +961,38 @@ msgstr "Manca almeno una delle classi richieste"
 msgid "At least one of required functions is missing"
 msgstr "Manca almeno una delle funzioni richieste"
 
+#: lib/api/recommendations/siteleads.php:71
+#: lib/api/recommendations/siteleads.php:149
+#: lib/api/recommendations/siteleads.php:212
+msgid "Required plugin is missing"
+msgstr "Il plugin richiesto manca"
+
+#: lib/api/recommendations/siteleads.php:79
+#: lib/api/recommendations/siteleads.php:156
+#: lib/api/recommendations/siteleads.php:217
+msgid "Required class or functions are missing"
+msgstr "Classe o funzioni richieste mancanti"
+
+#: lib/api/recommendations/siteleads.php:88
+msgid "Invalid widget type."
+msgstr "Tipo di widget non valido."
+
+#: lib/api/recommendations/siteleads.php:168
+msgid "Invalid widget ID"
+msgstr "ID widget non valido"
+
+#: lib/api/recommendations/siteleads.php:173
+msgid "Invalid params format"
+msgstr "Formato parametri non valido"
+
+#: lib/api/recommendations/siteleads.php:225
+msgid "Missing widgetId parameter."
+msgstr "Parametro widgetId mancante."
+
+#: lib/api/recommendations/siteleads.php:232
+msgid "Missing enabled parameter."
+msgstr "Parametro abilitato mancante."
+
 #: lib/api/subscribe-form.php:23
 msgid "Untitled form"
 msgstr "Modulo senza titolo"
@@ -1002,6 +1016,7 @@ msgid "%1$s at %2$s"
 msgstr "%1$s alle %2$s"
 
 #: lib/blog/walker-comment.php:39
+#: build/block-editor/index.js:82
 #: build/editor/index.js:53
 msgid "Edit"
 msgstr "Modifica"
@@ -1065,7 +1080,7 @@ msgstr "Indice"
 
 #: lib/full-site-editing/default-template-types.php:27
 msgid "The default template used when no other template is available. This is a required template in WordPress."
-msgstr "Il modello predefinito utilizzato quando non è disponibile nessun altro modello. Questo è un modello obbligatorio in WordPress."
+msgstr "Il modello predefinito utilizzato quando nessun altro modello è disponibile. Questo è un modello richiesto in WordPress."
 
 #: lib/full-site-editing/default-template-types.php:30
 msgctxt "Template name"
@@ -1074,7 +1089,7 @@ msgstr "Home"
 
 #: lib/full-site-editing/default-template-types.php:31
 msgid "Template used for the main page that displays blog posts. This is the front page by default in WordPress. If a static front page is set, this is the template used for the page that contains the latest blog posts."
-msgstr "Modello utilizzato per la pagina principale che visualizza gli articoli del blog. Questa è la pagina iniziale predefinita in WordPress. Se è impostata una pagina iniziale statica, questo è il modello utilizzato per la pagina che contiene gli ultimi articoli del blog."
+msgstr "Modello utilizzato per la pagina principale che visualizza gli articoli del blog. Questa è la pagina frontale di default in WordPress. Se è impostata una pagina frontale statica, questo è il modello utilizzato per la pagina che contiene gli ultimi articoli del blog."
 
 #: lib/full-site-editing/default-template-types.php:34
 msgctxt "Template name"
@@ -1092,7 +1107,7 @@ msgstr "Singolare"
 
 #: lib/full-site-editing/default-template-types.php:39
 msgid "Template used for displaying single views of the content. This template is a fallback for the Single, Post, and Page templates, which take precedence when they exist."
-msgstr "Modello utilizzato per visualizzare le singole viste dei contenuti. Questo modello è un fallback per i modelli Singolo, Post e Pagina, che hanno la precedenza se esistono."
+msgstr "Modello utilizzato per visualizzare le singole viste dei contenuti. Questo modello è un fallback per i modelli Singolo, Articolo e Pagina, che hanno la precedenza quando esistono."
 
 #: lib/full-site-editing/default-template-types.php:42
 msgctxt "Template name"
@@ -1561,7 +1576,7 @@ msgid "Features"
 msgstr "Funzionalità"
 
 #: lib/kubio-editor.php:151
-#: build/block-editor/index.js:110
+#: build/block-editor/index.js:114
 #: build/block-library/index.js:3
 #: build/block-library/index.js:29
 #: build/block-library/index.js:37
@@ -1754,7 +1769,7 @@ msgstr "Non hai i permessi per modificare questo termine."
 
 #: lib/menu/class-wp-rest-menus-controller.php:60
 msgid "Sorry, you cannot view this menu, unless you have access to permission edit it. "
-msgstr "Spiacente, non puoi visualizzare questo menu, a meno che tu non abbia il permesso di modificarlo."
+msgstr "Spiacente, non puoi visualizzare questo menu a meno che tu abbia il permesso di modificarlo."
 
 #: lib/menu/class-wp-rest-menus-controller.php:139
 msgid "Sorry, you are not allowed to assign the provided locations."
@@ -1806,7 +1821,7 @@ msgstr "Menu dell'intestazione di Kubio"
 
 #: lib/menu/locations.php:14
 msgid "Secondary header menu"
-msgstr "Menu di intestazione secondario"
+msgstr "Menu di intestazione secondaria"
 
 #: lib/menu/locations.php:15
 msgid "Kubio secondary header menu"
@@ -1839,6 +1854,10 @@ msgstr "Anteprima di Kubio"
 #: lib/preview/index.php:253
 msgid "Current preview state is unavailable"
 msgstr "Lo stato di anteprima attuale non è disponibile"
+
+#: lib/preview/index.php:288
+msgid "No URL provided"
+msgstr "Nessun URL fornito"
 
 #. translators: the placeholder is an url
 #: lib/pro/filters/notices.php:33
@@ -1874,7 +1893,7 @@ msgstr "Attiva la licenza"
 #: lib/pro/src/Core/License/ActivationForm.php:99
 #, php-format
 msgid "Your key was sent via email when the purchase was completed. Also you can find the key in the %1$s of your %2$s account"
-msgstr "La tua chiave è stata inviata via email quando l'acquisto è stato completato. Puoi trovare la chiave anche nel %1$s del tuo account %2$s"
+msgstr "La tua chiave è stata inviata via email al completamento dell'acquisto. Puoi trovare la chiave anche nel %1$s del tuo account %2$s"
 
 #: lib/pro/src/Core/License/ActivationForm.php:122
 #: build/admin-area/index.js:1
@@ -1917,7 +1936,7 @@ msgstr "Ci puoi dire cosa ti ha ispirato a decidere di fare l'upgrade?"
 #: lib/pro/src/Core/License/CheckForm.php:27
 #, php-format
 msgid "There was an error calling Kubio License Server: <code>%1$s</code>. Please contact us for support on <a href=\"%2$s\" target=\"_blank\">Kubio</a> website"
-msgstr "Si è verificato un errore durante la chiamata al Server delle Licenze di Kubio: <code>%1$s</code>. Contattaci per ricevere supporto sul sito di <a href=\"%2$s\" target=\"_blank\">Kubio</a>"
+msgstr "Si è verificato un errore durante la chiamata al Server delle Licenze di Kubio: <code>%1$s</code>. Contattaci per supporto sul sito web di <a href=\"%2$s\" target=\"_blank\">Kubio</a>"
 
 #. translators: %s - string with server error response
 #: lib/pro/src/Core/License/CheckForm.php:36
@@ -1975,7 +1994,7 @@ msgid "Template Part Not Found"
 msgstr "Parte del template non trovata"
 
 #: lib/src/Core/CustomizerImporter.php:275
-#: build/block-editor/index.js:100
+#: build/block-editor/index.js:104
 #: build/block-library/index.js:19
 #: build/controls/index.js:19
 #: build/controls/index.js:53
@@ -2008,7 +2027,7 @@ msgstr "Sì, mantieni la mia nuova home page"
 
 #: lib/src/Core/KubioFrontPageRevertNotice.php:738
 msgid "Restore my previous home page"
-msgstr "Ripristina la mia vecchia home page"
+msgstr "Ripristina la mia home page precedente"
 
 #: lib/src/Core/KubioFrontPageRevertNotice.php:765
 #: build/editor/index.js:1
@@ -2108,7 +2127,7 @@ msgstr "Si è verificato un errore durante il recupero del file da: %1$s%2$s%3$s
 #: lib/src/DemoSites/DemoSitesHelpers.php:314
 #, php-format
 msgid "An error occurred while writing file to your server! Tried to write a file to: %1$s%2$s."
-msgstr "Si è verificato un errore durante la scrittura del file sul tuo server! Tentativo di scrivere un file su: %1$s%2$s."
+msgstr "Si è verificato un errore durante la scrittura del file sul tuo server! Tentativo di scrivere un file in: %1$s%2$s."
 
 #. translators: %1$s and %2$s - strong HTML tags, %3$s - HTML link to a doc page.
 #: lib/src/DemoSites/DemoSitesHelpers.php:251
@@ -2118,7 +2137,7 @@ msgstr "Questo sito WordPress non ha accesso %1$sdiretto%2$s alla scrittura dei 
 
 #: lib/src/DemoSites/DemoSitesImporter.php:199
 msgid "Warn: Unable set memory_limit"
-msgstr "Attenzione: Impossibile impostare memory_limit"
+msgstr "Avviso: Impossibile impostare memory_limit"
 
 #: lib/src/DemoSites/DemoSitesImporter.php:228
 msgid "No import files specified!"
@@ -2175,13 +2194,13 @@ msgstr "Nuova chiamata AJAX!"
 
 #: lib/src/DemoSites/WXRImporter.php:585
 msgid "Posts post processing"
-msgstr "Elaborazione post"
+msgstr "Elaborazione post di articoli"
 
 #. translators: %1$s = term slug, %2$s = taxonomy
 #: lib/src/DemoSites/WXRImporter.php:596
 #, php-format
 msgid "Create term `%1$s` in `%2$s`"
-msgstr "Creare il termine '%1$s' in '%2$s'"
+msgstr "Crea il termine '%1$s' in '%2$s'"
 
 #. translators: %s - plugin slug
 #: lib/src/PluginsManager.php:69

@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-11T11:33:25+03:00\n"
+"POT-Creation-Date: 2026-04-02T13:04:43+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.12.0\n"
@@ -106,7 +106,7 @@ msgstr "Y"
 #: build/block-library/blocks/page-title/index.php:78
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "Monatsarchiv %1$s"
+msgstr "Monatsarchiv %s"
 
 #. translators: Daily archive title. 1: Date
 #: build/block-library/blocks/page-title/index.php:82
@@ -368,7 +368,7 @@ msgstr "Nur verfügbar mit Kubio PRO"
 #: lib/admin-pages/main-page/demo-sites.php:149
 #: build/block-editor/index.js:11
 #: build/block-editor/index.js:23
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/controls/index.js:53
 #: build/editor/index.js:1
@@ -481,7 +481,7 @@ msgstr "%1$s - Lade die ZIP-Datei über WordPress > Plugins > %2$s hoch und gib 
 #. Translators: %1$s: Install & Activate, %2$s: Add New.
 #: lib/admin-pages/main-page/upgrade-pro.php:51
 msgid "Install & Activate"
-msgstr "Installieren & Aktivieren"
+msgstr "Installieren und Aktivieren"
 
 #: lib/admin-pages/main-page/upgrade-pro.php:52
 msgid "Add New"
@@ -517,7 +517,7 @@ msgstr "<strong>Mehrere Header & Fußzeilen</strong> - Passe Header, Fußzeilen 
 
 #: lib/admin-pages/main-page/upgrade-pro.php:74
 msgid "<strong>Premium Support & Updates</strong> - We got you covered with priority support and continuous enhancements."
-msgstr "<strong>Premiumer Support & Updates</strong> - Wir haben dich abgedeckt mit Prioritätssupport und kontinuierlichen Verbesserungen."
+msgstr "<strong>Premium Support & Updates</strong> - Wir haben dich abgedeckt mit Prioritätssupport und kontinuierlichen Verbesserungen."
 
 #: lib/admin-pages/pages.php:59
 #: build/pro/index.js:1
@@ -562,8 +562,8 @@ msgstr "3D-Modell"
 #. translators: 1: The side of the block being modified (top, bottom, left etc.). 2. Type of spacing being modified (padding, margin, etc).
 #. translators: %s: file name
 #: lib/AI/SDApi/KubioImagePrompts.php:15
-#: build/block-editor/index.js:100
-#: build/block-editor/index.js:110
+#: build/block-editor/index.js:104
+#: build/block-editor/index.js:114
 #: build/controls/index.js:53
 msgid "Background image"
 msgstr "Hintergrundbild"
@@ -578,7 +578,7 @@ msgid "Artistic painting"
 msgstr "Kunstmalerie"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:24
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/editor/index.js:55
 msgid "Landscape"
@@ -589,7 +589,7 @@ msgid "Macro"
 msgstr "Makro"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:26
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/editor/index.js:55
 msgid "Portrait"
@@ -625,7 +625,7 @@ msgid "Floral"
 msgstr "Blumig"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:40
-#: build/block-editor/index.js:100
+#: build/block-editor/index.js:104
 #: build/controls/index.js:15
 #: build/controls/index.js:53
 #: build/controls/index.js:55
@@ -918,24 +918,6 @@ msgstr "Der aktuelle Beitrag ist leer. Ein Platzhaltertext wird im Editor angeze
 msgid "Api key not found"
 msgstr "API-Schlüssel nicht gefunden"
 
-#: lib/api/recommendations/bubble-chat.php:64
-#: lib/api/recommendations/bubble-chat.php:116
-msgid "Required plugin is missing"
-msgstr "Das erforderliche Plugin fehlt"
-
-#: lib/api/recommendations/bubble-chat.php:70
-#: lib/api/recommendations/bubble-chat.php:122
-msgid "Required class or functions are missing"
-msgstr "Erforderliche Klasse oder Funktionen fehlen"
-
-#: lib/api/recommendations/bubble-chat.php:93
-msgid "Kubio Widget"
-msgstr "Kubio Widget"
-
-#: lib/api/recommendations/bubble-chat.php:143
-msgid "Widget not found"
-msgstr "Widget nicht gefunden"
-
 #: lib/api/recommendations/contact-forms.php:47
 msgid "Contact Form plugin is not active!"
 msgstr "Das Kontaktformular-Plugin ist nicht aktiv!"
@@ -956,7 +938,7 @@ msgstr "Plugin-Slug ist erforderlich"
 #: lib/api/recommendations/index.php:94
 #: lib/api/recommendations/index.php:101
 msgid "Failed to fetch default settings"
-msgstr "Fehler beim Abrufen der Standardwerte"
+msgstr "Fehler beim Abrufen der Standard-Einstellungen"
 
 #: lib/api/recommendations/index.php:105
 msgid "No default settings found for the plugin"
@@ -964,7 +946,7 @@ msgstr "Keine Standardwerte für das Plugin gefunden"
 
 #: lib/api/recommendations/index.php:110
 msgid "Invalid default settings format"
-msgstr "Ungültiges Standardformat für Einstellungen"
+msgstr "Ungültiges Standard-Einstellungsformat"
 
 #: lib/api/recommendations/newsletter/index.php:49
 msgid "Promo plugin is not active!"
@@ -978,6 +960,38 @@ msgstr "Mindestens eine der erforderlichen Klassen fehlt"
 #: lib/recommendations/contact-forms.php:80
 msgid "At least one of required functions is missing"
 msgstr "Mindestens eine der erforderlichen Funktionen fehlt"
+
+#: lib/api/recommendations/siteleads.php:71
+#: lib/api/recommendations/siteleads.php:149
+#: lib/api/recommendations/siteleads.php:212
+msgid "Required plugin is missing"
+msgstr "Das erforderliche Plugin fehlt"
+
+#: lib/api/recommendations/siteleads.php:79
+#: lib/api/recommendations/siteleads.php:156
+#: lib/api/recommendations/siteleads.php:217
+msgid "Required class or functions are missing"
+msgstr "Erforderliche Klasse oder Funktionen fehlen"
+
+#: lib/api/recommendations/siteleads.php:88
+msgid "Invalid widget type."
+msgstr "Ungültiger Widget-Typ."
+
+#: lib/api/recommendations/siteleads.php:168
+msgid "Invalid widget ID"
+msgstr "Ungültige Widget-ID"
+
+#: lib/api/recommendations/siteleads.php:173
+msgid "Invalid params format"
+msgstr "Ungültiges Parameterformat"
+
+#: lib/api/recommendations/siteleads.php:225
+msgid "Missing widgetId parameter."
+msgstr "Fehlender widgetId-Parameter."
+
+#: lib/api/recommendations/siteleads.php:232
+msgid "Missing enabled parameter."
+msgstr "Fehlender aktivierter Parameter."
 
 #: lib/api/subscribe-form.php:23
 msgid "Untitled form"
@@ -1002,6 +1016,7 @@ msgid "%1$s at %2$s"
 msgstr "%1$s um %2$s"
 
 #: lib/blog/walker-comment.php:39
+#: build/block-editor/index.js:82
 #: build/editor/index.js:53
 msgid "Edit"
 msgstr "Bearbeiten"
@@ -1561,7 +1576,7 @@ msgid "Features"
 msgstr "Funktionen"
 
 #: lib/kubio-editor.php:151
-#: build/block-editor/index.js:110
+#: build/block-editor/index.js:114
 #: build/block-library/index.js:3
 #: build/block-library/index.js:29
 #: build/block-library/index.js:37
@@ -1840,6 +1855,10 @@ msgstr "Kubio Vorschau"
 msgid "Current preview state is unavailable"
 msgstr "Der aktuelle Vorschaustatus ist nicht verfügbar"
 
+#: lib/preview/index.php:288
+msgid "No URL provided"
+msgstr "Keine URL angegeben"
+
 #. translators: the placeholder is an url
 #: lib/pro/filters/notices.php:33
 #, php-format
@@ -1852,7 +1871,7 @@ msgstr "Der aktuelle Inhalt wird durch den Inhalt der Primärsprache ersetzt. Bi
 
 #: lib/pro/integrations/multilanguage/polylang.php:401
 msgid "Copy from primary language"
-msgstr "Kopiere aus der Primärsprache"
+msgstr "Kopieren aus der Primärsprache"
 
 #: lib/pro/src/Core/License/ActivationForm.php:32
 msgid "Enter a valid Kubio PRO license key to unlock all the PRO features"
@@ -1975,7 +1994,7 @@ msgid "Template Part Not Found"
 msgstr "Vorlage Teil nicht gefunden"
 
 #: lib/src/Core/CustomizerImporter.php:275
-#: build/block-editor/index.js:100
+#: build/block-editor/index.js:104
 #: build/block-library/index.js:19
 #: build/controls/index.js:19
 #: build/controls/index.js:53
@@ -2038,7 +2057,7 @@ msgstr "%1$s hat keine %2$s."
 #: lib/src/Core/Utils.php:124
 #, php-format
 msgid "Edit this page to insert %s or delete this block."
-msgstr "Bearbeite diese Seite, um %s einzufügen oder diesen Block zu löschen."
+msgstr "Bearbeiten Sie diese Seite, um %s einzufügen oder diesen Block zu löschen."
 
 #: lib/src/Core/Utils.php:144
 msgid "Kubio info"

@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-11T11:33:25+03:00\n"
+"POT-Creation-Date: 2026-04-02T13:04:43+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.12.0\n"
@@ -45,7 +45,7 @@ msgstr "このブロックにはメニューが割り当てられていません
 
 #: build/block-library/blocks/menu/menu-items/index.php:146
 msgid "Edit this page to select a menu or delete this block."
-msgstr "このページを編集してメニューを選択するか、このブロックを削除します。"
+msgstr "このページを編集してメニューを選択するか、このブロックを削除してください。"
 
 #: build/block-library/blocks/menu/offscreen/index.php:56
 msgid "Mobile Menu"
@@ -106,7 +106,7 @@ msgstr "Y"
 #: build/block-library/blocks/page-title/index.php:78
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "%1$s の月次アーカイブ"
+msgstr "%s の月次アーカイブ"
 
 #. translators: Daily archive title. 1: Date
 #: build/block-library/blocks/page-title/index.php:82
@@ -257,7 +257,7 @@ msgstr "スターターサイト"
 
 #: lib/admin-pages/kubio-get-started.php:27
 msgid "Beautiful starter sites with 1-click import"
-msgstr "1クリックでインポートできる美しいスターターサイト"
+msgstr "美しいスターターサイト、1クリックでインポート"
 
 #: lib/admin-pages/kubio-get-started.php:44
 #: build/editor/index.js:51
@@ -271,7 +271,7 @@ msgstr "最初のブロックベースのWordPressビルダー"
 
 #: lib/admin-pages/kubio-get-started.php:100
 msgid "Unknown tab partial"
-msgstr "不明なタブパーシャル"
+msgstr "不明なタブ部分"
 
 #: lib/admin-pages/kubio-get-started.php:115
 msgid "Kubio - Get Started"
@@ -296,7 +296,7 @@ msgstr "もっと高いレベルの権限が必要です。"
 
 #: lib/admin-pages/main-page/demo-sites.php:16
 msgid "Current user is not allowed to import starter sites. This feature is available only for administrators"
-msgstr "現在のユーザーはスターターサイトをインポートする権限がありません。この機能は管理者のみが利用できます"
+msgstr "現在のユーザーはスターターサイトをインポートする権限がありません。この機能は管理者のみが利用できます。"
 
 #: lib/admin-pages/main-page/demo-sites.php:31
 msgid "Retrieving starter sites..."
@@ -338,7 +338,7 @@ msgstr "投稿、ページ、画像、ウィジェット、メニュー、その
 
 #: lib/admin-pages/main-page/demo-sites.php:104
 msgid "Your current design will be completely overwritten by the new template. This process is irreversible. If you wish to be able to go back to the current design, please create a backup of your site before proceeding with the import."
-msgstr "現在のデザインは新しいテンプレートに完全に上書きされます。このプロセスは取り消せません。現在のデザインに戻りたい場合は、インポートを進める前にサイトのバックアップを作成してください。"
+msgstr "現在のデザインは新しいテンプレートに完全に上書きされます。このプロセスは取り消すことができません。現在のデザインに戻りたい場合は、インポートを進める前にサイトのバックアップを作成してください。"
 
 #: lib/admin-pages/main-page/demo-sites.php:110
 #: build/editor/index.js:21
@@ -368,7 +368,7 @@ msgstr "Kubio PROでのみ利用可能"
 #: lib/admin-pages/main-page/demo-sites.php:149
 #: build/block-editor/index.js:11
 #: build/block-editor/index.js:23
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/controls/index.js:53
 #: build/editor/index.js:1
@@ -444,7 +444,7 @@ msgstr "Kubioへのご興味ありがとうございます！"
 
 #: lib/admin-pages/main-page/upgrade-pro.php:23
 msgid "Upgrading to Kubio PRO gives you access to advanced features and tools to create a truly professional website—effortlessly."
-msgstr "Kubio PRO へのアップグレードにより、本当にプロフェッショナルなウェブサイトを簡単に作成するための高度な機能やツールにアクセスできます。"
+msgstr "Kubio PRO へのアップグレードにより、本格的なプロのウェブサイトを簡単に作成するための高度な機能やツールにアクセスできます。"
 
 #: lib/admin-pages/main-page/upgrade-pro.php:26
 msgid "How to Upgrade in 3 Simple Steps"
@@ -501,7 +501,7 @@ msgstr "今すぐアップグレードして、Kubio PROのフルパワーをお
 
 #: lib/admin-pages/main-page/upgrade-pro.php:70
 msgid "<strong>AI-Powered Website Creation</strong> - Instantly generate pages, images, and text."
-msgstr "<strong>AIによるウェブサイト作成</strong> - ページ、画像、テキストを即座に生成します。"
+msgstr "<strong>AIによるウェブサイト作成</strong> - 即座にページ、画像、テキストを生成します。"
 
 #: lib/admin-pages/main-page/upgrade-pro.php:71
 msgid "<strong>50+ Advanced Blocks</strong> - Add sliders, pricing tables, carousels, and more."
@@ -562,8 +562,8 @@ msgstr "3Dモデル"
 #. translators: 1: The side of the block being modified (top, bottom, left etc.). 2. Type of spacing being modified (padding, margin, etc).
 #. translators: %s: file name
 #: lib/AI/SDApi/KubioImagePrompts.php:15
-#: build/block-editor/index.js:100
-#: build/block-editor/index.js:110
+#: build/block-editor/index.js:104
+#: build/block-editor/index.js:114
 #: build/controls/index.js:53
 msgid "Background image"
 msgstr "背景画像"
@@ -578,7 +578,7 @@ msgid "Artistic painting"
 msgstr "芸術的な絵画"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:24
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/editor/index.js:55
 msgid "Landscape"
@@ -589,7 +589,7 @@ msgid "Macro"
 msgstr "マクロ"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:26
-#: build/block-editor/index.js:94
+#: build/block-editor/index.js:98
 #: build/block-library/index.js:19
 #: build/editor/index.js:55
 msgid "Portrait"
@@ -597,7 +597,7 @@ msgstr "縦方向"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:27
 msgid "Long Exposure"
-msgstr "ロングエクスポージャー"
+msgstr "長時間露光"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:31
 msgid "Clay"
@@ -625,7 +625,7 @@ msgid "Floral"
 msgstr "フローラル"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:40
-#: build/block-editor/index.js:100
+#: build/block-editor/index.js:104
 #: build/controls/index.js:15
 #: build/controls/index.js:53
 #: build/controls/index.js:55
@@ -713,7 +713,7 @@ msgstr "鉛筆画"
 
 #: lib/AI/SDApi/KubioImagePrompts.php:64
 msgid "Watercolor"
-msgstr "水彩"
+msgstr "水彩画"
 
 #: lib/AI/utils.php:73
 #: build/ai/index.js:1
@@ -747,7 +747,7 @@ msgstr "テクニカル"
 
 #: lib/AI/utils.php:86
 msgid "Specific to a particular field or industry, this style uses terminology and jargon understood by experts in that field. It aims for clear and precise communication within that domain."
-msgstr "特定の分野や産業に特化したこのスタイルは、その分野の専門家に理解される用語やジャーゴンを使用しています。その目的は、その領域内で明確かつ正確なコミュニケーションを図ることです。"
+msgstr "特定の分野や業界に特有のスタイルで、その分野の専門家に理解される用語やジャーゴンを使用しています。その領域内で明確かつ正確なコミュニケーションを目指しています。"
 
 #: lib/AI/utils.php:90
 msgid "Persuasive"
@@ -763,7 +763,7 @@ msgstr "ユーモアのある"
 
 #: lib/AI/utils.php:95
 msgid "Intended to amuse the reader, this style uses wit, sarcasm, irony, and clever wordplay to evoke laughter or amusement."
-msgstr "読者を楽しませることを意図したこのスタイルは、ウィット、皮肉、皮肉、そして巧妙な言葉遊びを使って笑いや楽しみを引き起こします。"
+msgstr "読者を楽しませることを意図して、このスタイルはウィット、皮肉、皮肉、そして巧妙な言葉遊びを使用して笑いや楽しみを引き起こします。"
 
 #: lib/AI/utils.php:104
 #: build/ai/index.js:1
@@ -902,7 +902,7 @@ msgstr "悪い名前。"
 
 #: lib/api/colibri.php:181
 msgid "No id."
-msgstr "ID なし。"
+msgstr "ID がありません。"
 
 #: lib/api/colibri.php:241
 msgid "Unable to open export file (archive) for writing."
@@ -917,24 +917,6 @@ msgstr "現在の投稿コンテンツは空です。エディターにプレー
 #: lib/api/kubio-cloud.php:92
 msgid "Api key not found"
 msgstr "APIキーが見つかりません"
-
-#: lib/api/recommendations/bubble-chat.php:64
-#: lib/api/recommendations/bubble-chat.php:116
-msgid "Required plugin is missing"
-msgstr "必要なプラグインが見つかりません"
-
-#: lib/api/recommendations/bubble-chat.php:70
-#: lib/api/recommendations/bubble-chat.php:122
-msgid "Required class or functions are missing"
-msgstr "必要なクラスまたは関数が見つかりません"
-
-#: lib/api/recommendations/bubble-chat.php:93
-msgid "Kubio Widget"
-msgstr "Kubioウィジェット"
-
-#: lib/api/recommendations/bubble-chat.php:143
-msgid "Widget not found"
-msgstr "ウィジェットが見つかりません"
 
 #: lib/api/recommendations/contact-forms.php:47
 msgid "Contact Form plugin is not active!"
@@ -964,11 +946,11 @@ msgstr "プラグインのデフォルト設定が見つかりません"
 
 #: lib/api/recommendations/index.php:110
 msgid "Invalid default settings format"
-msgstr "デフォルト設定の形式が無効です"
+msgstr "無効なデフォルト設定形式"
 
 #: lib/api/recommendations/newsletter/index.php:49
 msgid "Promo plugin is not active!"
-msgstr "プロモーションプラグインはアクティブではありません！"
+msgstr "プロモーションプラグインがアクティブではありません！"
 
 #: lib/api/recommendations/newsletter/index.php:52
 msgid "At least one of required classes is missing"
@@ -978,6 +960,38 @@ msgstr "必要なクラスのうち少なくとも1つが見つかりません"
 #: lib/recommendations/contact-forms.php:80
 msgid "At least one of required functions is missing"
 msgstr "必要な機能のうち少なくとも1つが見つかりません"
+
+#: lib/api/recommendations/siteleads.php:71
+#: lib/api/recommendations/siteleads.php:149
+#: lib/api/recommendations/siteleads.php:212
+msgid "Required plugin is missing"
+msgstr "必要なプラグインが見つかりません"
+
+#: lib/api/recommendations/siteleads.php:79
+#: lib/api/recommendations/siteleads.php:156
+#: lib/api/recommendations/siteleads.php:217
+msgid "Required class or functions are missing"
+msgstr "必要なクラスまたは関数が見つかりません"
+
+#: lib/api/recommendations/siteleads.php:88
+msgid "Invalid widget type."
+msgstr "無効なウィジェットタイプです。"
+
+#: lib/api/recommendations/siteleads.php:168
+msgid "Invalid widget ID"
+msgstr "無効なウィジェットID"
+
+#: lib/api/recommendations/siteleads.php:173
+msgid "Invalid params format"
+msgstr "無効なパラメータ形式"
+
+#: lib/api/recommendations/siteleads.php:225
+msgid "Missing widgetId parameter."
+msgstr "widgetIdパラメーターが見つかりません。"
+
+#: lib/api/recommendations/siteleads.php:232
+msgid "Missing enabled parameter."
+msgstr "有効化されたパラメーターが見つかりません。"
 
 #: lib/api/subscribe-form.php:23
 msgid "Untitled form"
@@ -1002,6 +1016,7 @@ msgid "%1$s at %2$s"
 msgstr "%1$s %2$s"
 
 #: lib/blog/walker-comment.php:39
+#: build/block-editor/index.js:82
 #: build/editor/index.js:53
 msgid "Edit"
 msgstr "編集"
@@ -1046,7 +1061,7 @@ msgstr "%1$s、%2$s"
 #: lib/filters/requirements-notices.php:42
 #, php-format
 msgid "If you want to rollback to a previous version you can get it here: <a href=\"%1$s\">%2$s</a>. You can follow this steps to manually install a Kubio: <a target=\"_blank\" href=\"%3$s\">Manual plugin update</a>"
-msgstr "以前のバージョンに戻りたい場合は、こちらからダウンロードできます：<a href=\"%1$s\">%2$s</a>。Kubio を手動でインストールする手順に従うことができます：<a target=\"_blank\" href=\"%3$s\">プラグインの手動更新</a>"
+msgstr "以前のバージョンに戻りたい場合は、こちらからダウンロードできます：<a href=\"%1$s\">%2$s</a>。Kubio を手動でインストールする手順に従うこともできます：<a target=\"_blank\" href=\"%3$s\">プラグインの手動更新</a>"
 
 #. translators: %s required message. e.g. WordPress 6.0 and PHP 7.2
 #: lib/filters/requirements-notices.php:105
@@ -1065,7 +1080,7 @@ msgstr "インデックス"
 
 #: lib/full-site-editing/default-template-types.php:27
 msgid "The default template used when no other template is available. This is a required template in WordPress."
-msgstr "他に利用可能なテンプレートがない場合に使用されるデフォルトのテンプレートです。これはWordPressで必須のテンプレートです。"
+msgstr "他のテンプレートが利用できない場合に使用されるデフォルトのテンプレートです。これはWordPressで必須のテンプレートです。"
 
 #: lib/full-site-editing/default-template-types.php:30
 msgctxt "Template name"
@@ -1092,7 +1107,7 @@ msgstr "個別"
 
 #: lib/full-site-editing/default-template-types.php:39
 msgid "Template used for displaying single views of the content. This template is a fallback for the Single, Post, and Page templates, which take precedence when they exist."
-msgstr "コンテンツの個別ビューを表示するために使用されるテンプレート。このテンプレートは、存在する場合は優先されるシングル、投稿、およびページのテンプレートの代替となります。"
+msgstr "コンテンツの単一ビューを表示するために使用されるテンプレート。このテンプレートは、存在する場合に優先されるシングル、投稿、およびページのテンプレートの代替となります。"
 
 #: lib/full-site-editing/default-template-types.php:42
 msgctxt "Template name"
@@ -1101,7 +1116,7 @@ msgstr "個別投稿"
 
 #: lib/full-site-editing/default-template-types.php:43
 msgid "Template used to display a single blog post."
-msgstr "単一のブログ投稿を表示するために使用されるテンプレートです。"
+msgstr "単一のブログ投稿を表示するために使用されるテンプレート。"
 
 #: lib/full-site-editing/default-template-types.php:46
 msgctxt "Template name"
@@ -1458,7 +1473,7 @@ msgstr "Kubio グローバル"
 #: lib/global-data.php:425
 #, php-format
 msgid "Kubio color %s"
-msgstr "Kubioの色 %s"
+msgstr "Kubioカラー%s"
 
 #: lib/integrations/third-party-themes/templates-importer.php:323
 #: lib/src/Core/Activation.php:494
@@ -1561,7 +1576,7 @@ msgid "Features"
 msgstr "機能"
 
 #: lib/kubio-editor.php:151
-#: build/block-editor/index.js:110
+#: build/block-editor/index.js:114
 #: build/block-library/index.js:3
 #: build/block-library/index.js:29
 #: build/block-library/index.js:37
@@ -1746,7 +1761,7 @@ msgstr "このタクソノミーではタームを編集する権限がありま
 
 #: lib/menu/class-wp-rest-menus-controller.php:40
 msgid "Sorry, you cannot view these menus, unless you have access to permission edit them. "
-msgstr "これらのメニューを表示する権限がないため、表示できません。"
+msgstr "これらのメニューを表示する権限がないため、申し訳ありません。"
 
 #: lib/menu/class-wp-rest-menus-controller.php:58
 msgid "Sorry, you are not allowed to edit this term."
@@ -1826,7 +1841,7 @@ msgstr "2番目のフッターメニュー"
 
 #: lib/menu/locations.php:23
 msgid "Kubio secondary footer menu"
-msgstr "Kubioのセカンダリフッターメニュー"
+msgstr "Kubioのセカンダリーフッターメニュー"
 
 #: lib/menu/menu-rest-controller.php:46
 msgid "Unique identifier for menu."
@@ -1840,6 +1855,10 @@ msgstr "Kubio プレビュー"
 msgid "Current preview state is unavailable"
 msgstr "現在のプレビュー状態は利用できません"
 
+#: lib/preview/index.php:288
+msgid "No URL provided"
+msgstr "URL が指定されていません"
+
 #. translators: the placeholder is an url
 #: lib/pro/filters/notices.php:33
 #, php-format
@@ -1848,7 +1867,7 @@ msgstr "以前のバージョンに戻りたい場合は、サポートチケッ
 
 #: lib/pro/integrations/multilanguage/polylang.php:385
 msgid "Current content will be replaced with the content from the primary language. Are you sure ?"
-msgstr "現在のコンテンツは主要言語のコンテンツで置き換えられます。よろしいですか？"
+msgstr "現在のコンテンツはプライマリ言語のコンテンツで置き換えられます。よろしいですか？"
 
 #: lib/pro/integrations/multilanguage/polylang.php:401
 msgid "Copy from primary language"
@@ -1874,7 +1893,7 @@ msgstr "ライセンスを有効化"
 #: lib/pro/src/Core/License/ActivationForm.php:99
 #, php-format
 msgid "Your key was sent via email when the purchase was completed. Also you can find the key in the %1$s of your %2$s account"
-msgstr "購入が完了した際にキーがメールで送信されました。また、%2$sアカウントの%1$sでキーを見つけることができます"
+msgstr "購入が完了すると、キーがメールで送信されます。また、%2$sアカウントの%1$sでキーを見つけることもできます"
 
 #: lib/pro/src/Core/License/ActivationForm.php:122
 #: build/admin-area/index.js:1
@@ -1917,7 +1936,7 @@ msgstr "アップグレードを決断するきっかけになったものを教
 #: lib/pro/src/Core/License/CheckForm.php:27
 #, php-format
 msgid "There was an error calling Kubio License Server: <code>%1$s</code>. Please contact us for support on <a href=\"%2$s\" target=\"_blank\">Kubio</a> website"
-msgstr "Kubio ライセンスサーバーの呼び出し中にエラーが発生しました: <code>%1$s</code>。サポートは<a href=\"%2$s\" target=\"_blank\">Kubio</a>のウェブサイトでお問い合わせください"
+msgstr "Kubioライセンスサーバーの呼び出し中にエラーが発生しました：<code>%1$s</code>。サポートは<a href=\"%2$s\" target=\"_blank\">Kubio</a>ウェブサイトでお問い合わせください"
 
 #. translators: %s - string with server error response
 #: lib/pro/src/Core/License/CheckForm.php:36
@@ -1954,7 +1973,7 @@ msgstr "メッセージを送信"
 
 #: lib/recommendations/newsletters.php:118
 msgid "Email capture popup 1"
-msgstr "メールアドレス取得ポップアップ 1"
+msgstr "メールアドレス取得ポップアップ1"
 
 #: lib/recommendations/recommendation-page-post-type.php:9
 msgid "Recommendation pages"
@@ -1968,14 +1987,14 @@ msgstr "メインメニュー"
 #: build/block-library/index.js:33
 #: build/block-library/index.js:35
 msgid "No {post_title} found!"
-msgstr "{post_title} が見つかりませんでした！"
+msgstr "{post_title} が見つかりません！"
 
 #: lib/src/Core/Blocks/TemplatePartBlockBase.php:26
 msgid "Template Part Not Found"
 msgstr "テンプレートパーツが見つかりません"
 
 #: lib/src/Core/CustomizerImporter.php:275
-#: build/block-editor/index.js:100
+#: build/block-editor/index.js:104
 #: build/block-library/index.js:19
 #: build/controls/index.js:19
 #: build/controls/index.js:53
@@ -1984,11 +2003,11 @@ msgstr "画像"
 
 #: lib/src/Core/EditInKubioCustomizerPanel.php:74
 msgid "After installing the Kubio builder, all page contents editing will be done using the WordPress block editor instead of the Customizer."
-msgstr "Kubioビルダーをインストールした後は、カスタマイザーの代わりにWordPressのブロックエディターを使用してすべてのページコンテンツを編集します。"
+msgstr "Kubioビルダーをインストールした後は、カスタマイザーの代わりにWordPressブロックエディターを使用してすべてのページコンテンツを編集します。"
 
 #: lib/src/Core/EditInKubioCustomizerPanel.php:77
 msgid "After installing the Kubio builder, all site editing will be done using the WordPress block editor instead of the Customizer."
-msgstr "Kubioビルダーをインストールすると、カスタマイザーの代わりにWordPressのブロックエディターを使用してサイトの編集が行われます。"
+msgstr "Kubioビルダーをインストールすると、カスタマイザーの代わりにWordPressブロックエディターを使用してサイトの編集が行われます。"
 
 #: lib/src/Core/EditInKubioCustomizerPanel.php:84
 msgid " Please use the button below to open the Kubio editor."
@@ -2038,7 +2057,7 @@ msgstr "%1$sには%2$sがありません。"
 #: lib/src/Core/Utils.php:124
 #, php-format
 msgid "Edit this page to insert %s or delete this block."
-msgstr "このページを編集して%sを挿入するか、このブロックを削除してください。"
+msgstr "このページを編集して%sを挿入するか、このブロックを削除します。"
 
 #: lib/src/Core/Utils.php:144
 msgid "Kubio info"
@@ -2091,11 +2110,11 @@ msgstr "Kubio デモインポート -"
 
 #: lib/src/DemoSites/DemoSitesHelpers.php:101
 msgid "Missing URL for downloading a file!"
-msgstr "ファイルをダウンロードするためのURLが見つかりません！"
+msgstr "ファイルのダウンロード用URLが見つかりません！"
 
 #: lib/src/DemoSites/DemoSitesHelpers.php:111
 msgid "Invalid URL for downloading a file!"
-msgstr "ファイルをダウンロードするためのURLが無効です！"
+msgstr "ファイルをダウンロードするための無効なURLです！"
 
 #. translators: %1$s and %3$s - strong HTML tags, %2$s - file URL, %4$s - br HTML tag, %5$s - error code, %6$s - error message.
 #: lib/src/DemoSites/DemoSitesHelpers.php:130
@@ -2114,7 +2133,7 @@ msgstr "ファイルの書き込み中にエラーが発生しました！書き
 #: lib/src/DemoSites/DemoSitesHelpers.php:251
 #, php-format
 msgid "This WordPress site does not have %1$sdirect%2$s write file access. This plugin needs it in order to save the demo import files to the upload directory of your site. You can change this setting with these instructions: %3$s."
-msgstr "このWordPressサイトには%1$s直接%2$sファイルへのアクセス権がありません。このプラグインは、デモインポートファイルをサイトのアップロードディレクトリに保存するために必要です。この設定は、次の手順で変更できます：%3$s。"
+msgstr "このWordPressサイトには%1$s直接%2$sファイルへの書き込みアクセス権がありません。このプラグインは、デモインポートファイルをサイトのアップロードディレクトリに保存するために必要です。この設定は、次の手順で変更できます：%3$s。"
 
 #: lib/src/DemoSites/DemoSitesImporter.php:199
 msgid "Warn: Unable set memory_limit"
@@ -2138,7 +2157,7 @@ msgstr "インポートファイルが未定義です"
 #: lib/src/DemoSites/DemoSitesImporter.php:263
 #, php-format
 msgid "The import files for: %s were successfully downloaded!"
-msgstr "インポート用のファイル：%s が正常にダウンロードされました！"
+msgstr "インポートファイル: %s が正常にダウンロードされました！"
 
 #: lib/src/DemoSites/DemoSitesImporter.php:281
 msgid "Manual kds import!"
@@ -2175,13 +2194,13 @@ msgstr "新しいAJAXコール！"
 
 #: lib/src/DemoSites/WXRImporter.php:585
 msgid "Posts post processing"
-msgstr "投稿処理"
+msgstr "投稿の処理"
 
 #. translators: %1$s = term slug, %2$s = taxonomy
 #: lib/src/DemoSites/WXRImporter.php:596
 #, php-format
 msgid "Create term `%1$s` in `%2$s`"
-msgstr "'%2$s' で用語 '%1$s' を作成する"
+msgstr "'%2$s'内の用語'%1$s'を作成する"
 
 #. translators: %s - plugin slug
 #: lib/src/PluginsManager.php:69
@@ -2232,7 +2251,7 @@ msgstr "ナビゲーション"
 #: build/block-library/blocks/navigation/blocks/navigation/block.json
 msgctxt "block description"
 msgid "If you've accidentally removed your navigation, you can re-add a navigation to your page with this block. The navigation block has 5 available layouts."
-msgstr "ナビゲーションを誤って削除した場合、このブロックを使用してページにナビゲーションを再追加できます。ナビゲーションブロックには5つのレイアウトが用意されています。"
+msgstr "ナビゲーションを誤って削除した場合、このブロックを使用してページにナビゲーションを再追加できます。ナビゲーションブロックには5つのレイアウトがあります。"
 
 #: build/block-library/blocks/row/block.json
 msgctxt "block title"

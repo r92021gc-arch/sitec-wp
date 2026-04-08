@@ -11,7 +11,7 @@ add_action(
 			$namespace,
 			'/prepare_fluent_booking_plugin',
 			array(
-				'methods'             => 'GET',
+				'methods'             => 'POST',
 				'callback'            => 'kubio_api_prepare_fluent_booking_plugin',
 				'permission_callback' => function () {
 					return current_user_can( 'edit_posts' );

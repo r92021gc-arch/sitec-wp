@@ -19,8 +19,12 @@ trait RecommendationsTrait {
 
 		switch ( $linkType ) {
 			case 'phone':
-				$phoneNr = $this->getAttribute( 'recommendation.bubbleChat.phone.phoneNr' );
+				$phoneNrOld = $this->getAttribute( 'recommendation.bubbleChat.phone.phoneNr' );
+				$phoneNr = $this->getAttribute( 'recommendation.siteleads.phone.phoneNr' );
 
+				if(!empty($phoneNrOld) && empty($phoneNr)) {
+					$phoneNr = $phoneNrOld;
+				}
 				$linkValue = '#';
 				if ( ! empty( $phoneNr ) ) {
 					$linkValue = 'tel:' . $phoneNr;
@@ -34,8 +38,12 @@ trait RecommendationsTrait {
 				);
 				break;
 			case 'whatsapp':
-				$phoneNr = $this->getAttribute( 'recommendation.bubbleChat.whatsapp.phoneNr' );
+				$phoneNrOld = $this->getAttribute( 'recommendation.bubbleChat.whatsapp.phoneNr' );
+				$phoneNr = $this->getAttribute( 'recommendation.siteleads.whatsapp.phoneNr' );
 
+				if(!empty($phoneNrOld) && empty($phoneNr)) {
+					$phoneNr = $phoneNrOld;
+				}
 				if ( ! empty( $phoneNr ) ) {
 					$linkValue  = 'https://wa.me/' . $phoneNr;
 					$attributes = Utils::getLinkAttributes(

@@ -6,7 +6,7 @@ require_once __DIR__ . '/recommendations-trait.php';
 require_once __DIR__ . '/contact-forms.php';
 require_once __DIR__ . '/newsletters.php';
 require_once __DIR__ . '/fluent-booking.php';
-require_once __DIR__ . '/bubble-chat.php';
+require_once __DIR__ . '/siteleads.php';
 require_once __DIR__ . '/recommendation-page-post-type.php';
 
 function kubio_get_recommendations_settings() {
@@ -26,10 +26,13 @@ function kubio_get_recommendations_settings() {
 			'inited'         => Flags::getSetting( 'fluentBookingInstalled', false ),
 			'itemsList'      => array(),
 		),
-		'bubbleChat'    => array(
-			'pluginIsActive' => kubio_is_bubble_chat_plugin_active(),
-			'inited'         => Flags::getSetting( 'bubbleChatInstalled', false ),
-			'itemsList'      => array(),
+		'siteleads'    => array(
+			'proIsInstalled' => kubio_is_siteleads_pro_plugin_installed(),
+			'pluginIsActive' => kubio_is_siteleads_plugin_active(),
+			'pluginIsInstalled' => kubio_is_siteleads_plugin_installed(),
+			'inited'         => Flags::getSetting( 'siteleadsInstalled', false ),
+			'itemsList'      => kubio_get_siteleads_widgets(),
+			'previewNonce' => wp_create_nonce( 'events_nonce' ),
 		),
 	);
 }

@@ -2,7 +2,7 @@
 
 return array(
 	'type'               => 'simple-popup',
-	'template'           => '21',
+	'template'           => '36',
 	'triggers'           =>
 		array(
 			'exit-intent'             =>

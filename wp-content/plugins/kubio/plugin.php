@@ -6,7 +6,7 @@
  * Description: Using the power of AI, Kubio gives you a head start by generating a first draft of your website, which you can further customize to your liking.
  * Author: ExtendThemes
  * Author URI: https://extendthemes.com
- * Version: 2.6.5
+ * Version: 2.7.2
  * License: GPL3+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: kubio
@@ -50,8 +50,8 @@ if ( defined( 'KUBIO_VERSION' ) ) {
 	return;
 }
 
-define( 'KUBIO_VERSION', '2.6.5' );
-define( 'KUBIO_BUILD_NUMBER', '449' );
+define( 'KUBIO_VERSION', '2.7.2' );
+define( 'KUBIO_BUILD_NUMBER', '471' );
 
 define( 'KUBIO_ENTRY_FILE', __FILE__ );
 define( 'KUBIO_ROOT_DIR', plugin_dir_path( __FILE__ ) );
@@ -74,7 +74,7 @@ if ( ! defined( 'KUBIO_INCLUDE_TEST_SNIPPETS' ) ) {
 
 
 if ( ! defined( 'KUBIO_MINIMUM_WP_VERSION' ) ) {
-	define( 'KUBIO_MINIMUM_WP_VERSION', '6.5' );
+	define( 'KUBIO_MINIMUM_WP_VERSION', '6.7' );
 }
 
 

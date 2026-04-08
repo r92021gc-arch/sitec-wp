@@ -21,6 +21,7 @@ class ThirdPartyPluginAssetLoaderInEditor
 	protected function __construct()
 	{
 		add_action('admin_print_scripts', array($this, 'printAssetsList'), 20);
+		add_action('wp_print_scripts', array($this, 'printAssetsList'), 20);
 		add_action('kubio/editor/enqueue_assets', array($this, 'dequeuePluginAssetsInKubioEditor'), 20);
 		add_action('enqueue_block_editor_assets', array($this, 'dequeueKubioScriptsInIframeRequest'), 9999);
 	}

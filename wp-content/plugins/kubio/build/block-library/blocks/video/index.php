@@ -42,6 +42,9 @@ class VideoBlock extends BlockBase {
 		$shortcodeContent = $this->getShortcode( $params );
 
 		$frontendAttributes = $this->getFrontendScriptAttributes();
+		$url = $this->getAttribute('posterImage.url');
+		$url = $this->getEscapedUrl($url);
+
 
 		return array(
 			self::VIDEO  => array(
@@ -57,7 +60,7 @@ class VideoBlock extends BlockBase {
 			self::POSTER => array_merge(
 				array(
 					'style' => array(
-						'background-image' => "url({$this->getAttribute( 'posterImage.url' )})",
+						'background-image' => "url($url)",
 					),
 				),
 				$frontendAttributes
@@ -65,6 +68,21 @@ class VideoBlock extends BlockBase {
 		);
 	}
 
+	public function getEscapedUrl($url) {
+		$url = esc_url($url);
+
+		// Allow only http/https
+		if (! empty($url)) {
+			$parsed = wp_parse_url($url);
+			if (! isset($parsed['scheme']) || ! in_array($parsed['scheme'], ['http', 'https'], true)) {
+				$url = '';
+			}
+		} else {
+			$url = '';
+		}
+
+		return $url;
+	}
 	public function getVideoParameters() {
 		$paramList = array( 'internalUrl', 'youtubeUrl', 'vimeoUrl', 'videoCategory', 'displayAs', 'playerOptions' );
 		$params    = array();
@@ -339,8 +357,8 @@ class VideoBlock extends BlockBase {
 
 	function doVideo( $url, $attributes ) {
 		$poster_url = $this->getAttribute( 'posterImage.url' );
-
-		if ( $poster_url ) {
+		$poster_url = $this->getEscapedUrl($poster_url);
+		if ( !empty($poster_url) ) {
 			$attributes .= ' poster="' . esc_url( $poster_url ) . '"';
 		}
 
@@ -348,7 +366,7 @@ class VideoBlock extends BlockBase {
 			'<video class="h-video-main" playsinline poster="%s" %s>' .
 			' <source src="%s" type="video/mp4" />' .
 			'</video>',
-			$poster_url,
+			esc_attr($poster_url),
 			esc_attr( $attributes ),
 			esc_url( $url )
 		);

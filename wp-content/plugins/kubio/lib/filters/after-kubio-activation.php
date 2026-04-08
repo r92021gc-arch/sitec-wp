@@ -19,7 +19,7 @@ function kubio_set_editor_ui_version() {
 	//who may encounter the issue
 	Flags::setSetting( 'enableTypographyBodySelector', true );
 
-
+	Flags::setSetting( 'allowSiteLeadsRecommendations', true);
 }
 
 

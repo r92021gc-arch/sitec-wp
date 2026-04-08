@@ -23,7 +23,7 @@
 		},
 		"wc-on-sale": {
 			"withGlobalPrefix": true,
-			"selector": ".woocommerce-loop-product__link .onsale"
+			"selector": ".woocommerce-loop-product__link .onsale, .single-product .onsale"
 		}
 	}
 }

@@ -275,3 +275,59 @@ function kubio_enqueue_preview_url_maintainer() {
 		wp_add_inline_script( 'kubio-maintain-preview-url', 'kubioMaintainPreviewURLBase="' . site_url() . '"', 'before' );
 	}
 }
+
+
+add_action(
+	'wp_ajax_kubio_url_previewer',
+	function () {
+
+		// check for the kubio editor nonce
+		check_ajax_referer( 'kubio_ajax_nonce' );
+
+		$url     = sanitize_text_field( Arr::get( $_REQUEST, 'url', '' ) );
+		$message = sanitize_text_field( Arr::get( $_REQUEST, 'empty_message', __( 'No URL provided', 'kubio' ) ) );
+		$content = '';
+
+		if ( empty( $url ) ) {
+			$content = kubio_get_iframe_loader(
+				array(
+					'message'  => esc_html( $message ),
+					'bg-color' => '#333333',
+					'color'    => '#ffffff',
+					'size'     => '60px',
+				)
+			);
+		} else {
+			$content = sprintf( '<iframe allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" src="%s"></iframe>', esc_url( $url ) );
+		}
+
+		// create a fullscreen iframe with the url
+		ob_start();
+		?>
+		<!DOCTYPE html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Kubio URL Previewer</title>
+				<style>
+					iframe {
+						border: none !important;
+						display: block!important;
+						position: absolute!important;
+						top: 0!important;
+						left: 0!important;
+						width: 100%!important;
+						height: 100%!important;
+					}
+				</style>
+			</head>
+			<body style="margin:0; padding:0; overflow:hidden;">
+				<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			</body>
+		</html>
+		<?php
+		$html = ob_get_clean();
+		die( $html );
+	}
+);

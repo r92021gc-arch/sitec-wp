@@ -135,8 +135,8 @@ function kubio_get_indexed_default_template_types() {
  */
 function kubio_get_template_type_slugs() {
 
-	if ( function_exists( 'gutenberg_get_template_type_slugs' ) ) {
-		return gutenberg_get_template_type_slugs();
+	if ( function_exists( 'get_default_block_template_types' ) ) {
+		return array_keys( get_default_block_template_types());
 	}
 
 	return array_keys( kubio_get_default_template_types() );

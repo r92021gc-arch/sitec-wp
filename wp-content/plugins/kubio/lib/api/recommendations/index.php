@@ -5,7 +5,7 @@
 require_once __DIR__ . '/contact-forms.php';
 require_once __DIR__ . '/newsletter/index.php';
 require_once __DIR__ . '/fluent-booking.php';
-require_once __DIR__ . '/bubble-chat.php';
+require_once __DIR__ . '/siteleads.php';
 
 
 add_action(
@@ -129,8 +129,8 @@ function kubio_api_get_recommendations_settings( WP_REST_Request $request ) {
 			case 'fluentBooking':
 				$settings[ $key ]['itemsList'] = kubio_get_fluent_booking_events();
 				break;
-			case 'bubbleChat':
-				$settings[ $key ]['itemsList'] = kubio_get_bubble_chat_widgets();
+			case 'siteleads':
+				$settings[ $key ]['itemsList'] = kubio_get_siteleads_widgets();
 				break;
 		}
 	}
