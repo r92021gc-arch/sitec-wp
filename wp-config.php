@@ -46,18 +46,26 @@ if (is_readable($sitecEnvPath)) {
     }
 }
 
-// ** Database settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', getenv('DB_NAME') ?: 'db_sitecweb' );
+// ** Database settings ** //
+// Lee desde $_ENV (Docker/Render), luego getenv(), luego valor local por defecto
+function _sitec_env( $key, $default = '' ) {
+    if ( isset( $_ENV[$key] ) && $_ENV[$key] !== '' ) return $_ENV[$key];
+    $v = getenv( $key );
+    return ( $v !== false && $v !== '' ) ? $v : $default;
+}
 
-/** Database username */
-define( 'DB_USER', getenv('DB_USER') ?: 'root' );
+define( 'DB_NAME',     _sitec_env('DB_NAME',     'db_sitecweb') );
+define( 'DB_USER',     _sitec_env('DB_USER',     'root') );
+define( 'DB_PASSWORD', _sitec_env('DB_PASSWORD', '') );
 
-/** Database password */
-define( 'DB_PASSWORD', getenv('DB_PASSWORD') ?: '' );
-
-/** Database hostname */
-define( 'DB_HOST', getenv('DB_HOST') ?: 'localhost' );
+// Si hay DB_PORT, incluirlo en DB_HOST (formato que espera WordPress: host:puerto)
+$_sitec_host = _sitec_env('DB_HOST', 'localhost');
+$_sitec_port = _sitec_env('DB_PORT', '');
+if ( $_sitec_port !== '' && $_sitec_port !== '3306' && strpos($_sitec_host, ':') === false ) {
+    $_sitec_host .= ':' . $_sitec_port;
+}
+define( 'DB_HOST', $_sitec_host );
+unset($_sitec_host, $_sitec_port);
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
