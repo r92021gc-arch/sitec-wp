@@ -12,7 +12,13 @@ node_modules/
 wp-content/themes/sitec/assets/css/main.css.map
 
 # WordPress
-wp-content/uploads/
+wp-content/uploads/*
+!wp-content/uploads/2026/
+!wp-content/uploads/2026/04/
+!wp-content/uploads/2026/04/*.jpg
+!wp-content/uploads/2026/04/*.png
+!wp-content/uploads/2026/04/*.gif
+!wp-content/uploads/2026/04/*.webp
 wp-content/upgrade/
 wp-content/cache/
 wp-content/advanced-cache.php
