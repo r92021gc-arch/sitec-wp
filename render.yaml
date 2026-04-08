@@ -5,13 +5,15 @@ services:
     plan: free
     envVars:
       - key: DB_HOST
-        sync: false
+        value: 4cn58h.h.filess.io
+      - key: DB_PORT
+        value: "3306"
       - key: DB_NAME
-        sync: false
+        value: sitec_finalthose
       - key: DB_USER
-        sync: false
+        value: sitec_finalthose
       - key: DB_PASSWORD
-        sync: false
+        value: dfb50b40271eda1b9317e6fed5b5989846de3a97
       - key: WP_HOME
         value: https://sitec-wordpress.onrender.com
       - key: WP_SITEURL
