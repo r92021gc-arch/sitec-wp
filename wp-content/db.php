@@ -9,6 +9,13 @@ Author URI: https://github.com/PostgreSQL-For-Wordpress
 License: GPLv2 or newer.
 */
 
+// Solo activar PG4WP en producción (Render). En local usa MySQL normal.
+$_pg4wp_driver = isset($_ENV['DB_DRIVER']) ? $_ENV['DB_DRIVER'] : getenv('DB_DRIVER');
+if ( $_pg4wp_driver !== 'pgsql' ) {
+    return; // Usar el driver MySQL por defecto de WordPress
+}
+unset($_pg4wp_driver);
+
 // Ensure we only load this config once
 if(!defined('PG4WP_ROOT')) {
 

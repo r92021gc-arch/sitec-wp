@@ -16,6 +16,8 @@ services:
         value: 09hUQOGbvvNVuImfEUBOABWFnlYfPR8X
       - key: DB_CHARSET
         value: utf8
+      - key: DB_DRIVER
+        value: pgsql
       - key: WP_HOME
         value: https://sitec-wordpress.onrender.com
       - key: WP_SITEURL
