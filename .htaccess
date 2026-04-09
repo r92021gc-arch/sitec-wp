@@ -1,8 +1,3 @@
-Options +Includes
-AddType text/html .shtml
-AddOutputFilter INCLUDES .shtml
-
-
 # BEGIN WordPress
 # Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
 # generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
@@ -10,11 +5,11 @@ AddOutputFilter INCLUDES .shtml
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /sitec/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /sitec/index.php [L]
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress

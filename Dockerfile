@@ -16,6 +16,11 @@ RUN apt-get update \
 # Enable Apache mods commonly needed
 RUN a2enmod rewrite headers include
 
+# Enable AllowOverride All so .htaccess is processed
+RUN printf '<Directory /var/www/html>\n\tOptions Indexes FollowSymLinks\n\tAllowOverride All\n\tRequire all granted\n</Directory>\n' \
+    > /etc/apache2/conf-available/wordpress.conf \
+    && a2enconf wordpress
+
 # Install Imagick from PECL
 RUN pecl install imagick \
     && docker-php-ext-enable imagick
